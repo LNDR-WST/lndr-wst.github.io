@@ -397,15 +397,21 @@ p {
 a {
     color: white;
     text-decoration: none;
-  }
-  
-  a:hover {
-    color:whitesmoke;
-  }
-  
-  a:visited {
-    color: white;
-  }
+}
+
+a:hover {
+  color:whitesmoke;
+}
+
+a:visited {
+  color: white;
+}
+
+a.attribution {
+  align-self: end;
+  font-size: 10px;
+  color: gray;
+}
 
 ul {
   /* width: 100%; */
