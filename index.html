@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"> 
+        <!-- Stylesheets -->
+        <link href="styles.css" rel="stylesheet">
+        <link href="navbar.css" rel="stylesheet">
+        <!-- Javascript -->
+        <script src="bodymovin/lottie-player.js"></script>
+        <script  src="https://code.jquery.com/jquery-3.5.1.min.js"  crossorigin="anonymous"></script>
+        <!-- Meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>[LNDR]</title>
+    </head>
+    <body>
+        <div class="navparent" id="nav">
+            <div class="navbar">
+                <a href="/"><div id="logosvg"><span id="btn-home">[&nbsp;LNDR&nbsp;]</span></div></a>
+                <!-- Burger-Menu -->
+                <!-- <div class="nav-burger-container">
+                    <input class="inputboxburger" type="checkbox" id="menuToggle"></input>
+                    <label for="menuToggle" class="menuOpen"><div class="open"></div></label>
+                    <div class="menu menuEffects">
+                        <label for="menuToggle"></label>
+                        <div class="menuContent" id="menu">
+                            <ul>
+                                <li><a href="/" onclick="uncheck('menuToggle')">Start</a></li>
+                                <li><a href="/about" onclick="uncheck('menuToggle')">About</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <div class="wrapper">
+            <div id="section">
+                <h1>LNDR</h1>
+                <h3>Eine<br>Projekt-<br>sammlung</h2>
+            </div>
+            <div id="section">
+                <h2>Übersicht</h1>
+                <div id="cardwrapper">
+                    <div class="card games">
+                        <div class="card-header">
+                            <img src="./img/projects/fah_screen.jpg">
+                        </div>
+                        <div class="card-content">
+                            <div id="card-tag-wrapper">
+                                <div id="card-tag">Games</div>
+                            </div>
+                            <p id="card-headline">Finding a Home</p>
+                            <p id="card-info">Prototyp eines Point & Click Adventures mit <span style="font-style: italic;">Adventure Studio</span></p>
+                        </div>                        
+                        <div id="card-btn" onclick="showContent('fah')"><a>Details</a></div>
+                    </div>
+                    <div class="card games">
+                        <div class="card-header">
+                            <img src="./img/projects/wotk_screen.jpg">
+                        </div>
+                        <div class="card-content">
+                            <div id="card-tag-wrapper">
+                                <div id="card-tag">Games</div>
+                            </div>
+                            <p id="card-headline">Wrath of Tiny Knight</p>
+                            <p id="card-info">Prototyp eines 2D-Pixel-Art-Sidescrollers mit <span style="font-style: italic;">Unity</span></p>
+                        </div>                        
+                        <div id="card-btn" onclick="showContent('wotk')"><a>Details</a></div>
+                    </div>
+                    <div class="card graphics">
+                        <div class="card-header">
+                            <img src="./img/projects/blender_screen.jpg">
+                        </div>
+                        <div class="card-content">
+                            <div id="card-tag-wrapper">
+                                <div id="card-tag">Graphics</div>
+                            </div>
+                            <p id="card-headline">3D-Modeling: Canon AE-1</p>
+                            <p id="card-info">3D Modellierung einer Kamera mit <span style="font-style: italic;">Blender</span></p>
+                        </div>                        
+                        <div id="card-btn" onclick="showContent('blender')"><a>Details</a></div>
+                    </div>
+                    <div class="card graphics web">
+                        <div class="card-header">
+                            <img src="./img/projects/three_screen.jpg">
+                        </div>
+                        <div class="card-content">
+                            <div id="card-tag-wrapper">
+                                <div id="card-tag">Graphics</div>
+                                <div id="card-tag">Web</div>
+                            </div>
+                            <p id="card-headline">WebGL Turntables</p>
+                            <p id="card-info">Nachbau eines Plattenspielers für eine Echtzeit-3D-Anwendung mit <span style="font-style: italic;">Three.JS</span></p>
+                        </div>                        
+                        <div id="card-btn" onclick="showContent('three')"><a>Details</a></div>
+                    </div>
+                    <div class="card software">
+                        <div class="card-header">
+                            <img src="./img/projects/timetracker_screen.jpg">
+                        </div>
+                        <div class="card-content">
+                            <div id="card-tag-wrapper">
+                                <div id="card-tag">Software</div>
+                            </div>
+                            <p id="card-headline">Timetracker</p>
+                            <p id="card-info">In <span style="font-style: italic;">Java</span> geschriebene Software zur projektbasierten Zeiterfassung (Prototyp)</p>
+                        </div>                        
+                        <div id="card-btn" onclick="showContent('timetracker')"><a>Details</a></div>
+                    </div>
+                    <div class="card web">
+                        <div class="card-header">
+                            <img src="./img/projects/codex_screen.jpg">
+                        </div>
+                        <div class="card-content">
+                            <div id="card-tag-wrapper">
+                                <div id="card-tag">Web</div>
+                            </div>
+                            <p id="card-headline">Codex Code-Plattform</p>
+                            <p id="card-info">Mit Node.js entwickelte Web-Plattform zum Austausch von Code-Snippets</p>
+                        </div>                        
+                        <div id="card-btn" onclick="showContent('codex')"><a>Details</a></div>
+                    </div>
+                    
+                    <i aria-hidden="true"></i>
+                    <i aria-hidden="true"></i>
+                    <i aria-hidden="true"></i>
+                    <i aria-hidden="true"></i>
+                </div>
+                <!-- HIDDEN OVERLAYS -->
+                <div class="wrapper wrapper-disabled" id="hidden-content">
+                    <div class="overlay-content" id="fah" >
+                        <div>
+                            <a class="close" onclick="hideContent('fah')"></a>
+                            <h3 class="overlay-hl" id="games">Finding a Home (2021)</h3>
+                            <table>
+                                <tr>
+                                    <th>Idee:</th>
+                                    <td>Point & Click Adventure</td>
+                                </tr>
+                                <tr>
+                                    <th>Kurs:</th>
+                                    <td>Media/Game Design 2</td>
+                                </tr>
+                                <tr>
+                                    <th>Semester:</th>
+                                    <td>2 (Media Systems, HAW Hamburg)</td>
+                                </tr>
+                                <tr>
+                                    <th>Engine:</th>
+                                    <td>Adventure Studio (v.3.5.0)</td>
+                                </tr>
+                                <tr>
+                                    <th>Hauptaufgaben:</th>
+                                    <td>Leveldesign, Development</td>
+                                </tr>
+                                <tr>
+                                    <th>Mitwirkende:</th>
+                                    <td>Soe Ö., Dana H., Mursal D.</td>
+                                </tr>
+                            </table>
+                            <div class="link-btn-box">
+                                <a href="https://github.com/LNDR-WST/codex" class="btn-link btn-github"></a>
+                                <a href="https://github.com/LNDR-WST/codex" class="btn-link btn-demo"></a>
+                                <a href="pdf/documentation.pdf" class="btn-link btn-pdf"></a>
+                            </div>
+                            <h4>Aufgabe</h4>
+                            <p>
+                                Im Rahmen des Kurses Media/Game Design 2, in dem einführende Elemente des Game Designs behandelt 
+                                wurden, war das Hauptziel einen spielbaren, kleinen Game-Prototypen umzusetzen. Die Game Engine 
+                                konnte dafür frei gewählt werden.<br>
+                                Im Fokus der Kursarbeit stand der übergreifende Spieleentwicklungsprozess im Fokus: Von der Ideen- 
+                                und Teamfindung hin zur Aufwandsschätzung, dem Erarbeiten eines Grobkonzepts und schließlich der 
+                                Umsetzung des Vorhabens.
+                            </p>
+                            <h4>Ergebnis</h4>
+                            <p>
+                                Das Produkt des Kurses ist Finding a Home: Der Prototyp zu einem Point-and-Click-Adventure in 
+                                Pixel-Art, das die Zukunfts-Geschichte eines Menschen erzählt, der aufgrund des unbewohnbaren 
+                                Zustands der Erde ein neues Zuhause im Universum sucht und auf seiner Reise diverse Abenteuer erlebt.
+                                <br><br>
+                                Zur Realisierung des Prototyps wurden diverse frei erhältliche Game-Assets und Sounds verwendet.
+                
+                            </p>
+                        </div>
+                    </div>    
+                </div>
+                <div class="wrapper wrapper-disabled" id="hidden-content">
+                    <div class="overlay-content" id="wotk" >
+                        <div>
+                            <a class="close" onclick="hideContent('wotk')"></a>
+                            <h3 class="overlay-hl" id="games">Wrath of Tiny Knight (2021)</h3>
+                            <table>
+                                <tr>
+                                    <th>Idee:</th>
+                                    <td>2D Pixel-Art-Sidescroller</td>
+                                </tr>
+                                <tr>
+                                    <th>Kurs:</th>
+                                    <td>Media/Game Design 3</td>
+                                </tr>
+                                <tr>
+                                    <th>Semester:</th>
+                                    <td>3 (Media Systems, HAW Hamburg)</td>
+                                </tr>
+                                <tr>
+                                    <th>Engine:</th>
+                                    <td>Unity 2021.1.6f1 (C#)</td>
+                                </tr>
+                                <tr>
+                                    <th>Hauptaufgaben:</th>
+                                    <td>HUD Design, Development-Support</td>
+                                </tr>
+                                <tr>
+                                    <th>Mitwirkende:</th>
+                                    <td>Moritz U., Paul S.</td>
+                                </tr>
+                            </table>
+                            <div class="link-btn-box">
+                                <a href="https://github.com/SirMightyMo/ProjectTBA" class="btn-link btn-github"></a>
+                                <a href="https://mightymo.itch.io/tinyknight" class="btn-link btn-demo"></a>
+                            </div>
+                            <img src="./img/projects/wotk_screen.jpg">
+                            <h4>Aufgabe</h4>
+                            <p>
+                                Die Spieleprojekte aus dem vorherigen Kurs sollten in Media/Game Design 3 deutlich weiterentwickelt 
+                                werden. Dafür wurden theoretische Inhalte vertieft, die in der Umsetzung dann Anwendung finden sollten. 
+                                So lag der Fokus der Projektarbeit in der Weiterentwicklung und damit auch auf intensiveren Testing und 
+                                Polishing.
+                            </p>
+                            <h4>Ergebnis</h4>
+                            <p>
+                                Der Prototyp Wrath of Tiny Knight, einem 2D-Sidescroller in Pixel-Art-Optik, in dem ein kleiner Ritter 
+                                mit Jump'n'Run-Manövern sowie einem einfachen Kampfsystem durch eine eher düstere, mittelalterliche Spielwelt 
+                                gesteuert wird, wurde bereits in Media/Game Design 2 von Moritz U. und Paul S. maßgeblich entwickelt.<br>
+                                Da die Grundmechaniken sowie das Leveldesign bereits sehr fortgeschritten waren, ging es nun vor allem darum, 
+                                Feedback-Mechaniken, User Interfaces, neue Gegnertypen, Sounds und weitere kleine Verbesserungen einzuarbeiten, 
+                                die zu einem runderen Spielerlebnis führen.
+                                <br><br>
+                                Am Ende kam ein spielbarer Prototyp heraus, der zwar nicht gänzlich fehlerfrei ist, aber insgesamt schon ein gutes 
+                                Spielgefühl vermittelt und Spielidee, Mechanics, den Core Gameplay Loop sowie die Game Design Pillars transportiert.
+                            </p>
+                            <div class="iframe-container">
+                                <iframe allowfullscreen="true" scrolling="no" id="game_drop" allowtransparency="true" webkitallowfullscreen="true" mozallowfullscreen="true" msallowfullscreen="true" src="https://v6p9d9t4.ssl.hwcdn.net/html/4058575/WoTK_build/index.html" allow="autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad; gyroscope; accelerometer; xr; cross-origin-isolated" frameborder="0"></iframe>
+                            </div>
+                            <table class="normal">
+                                <caption>Steuerung</caption>
+                                <tbody>
+                                    <tr>
+                                        <th class="first">Aktion</th>
+                                        <th>Controller (Xbox)</th>
+                                        <th>Controller (PS4)</th>
+                                        <th>Keyboard &amp; Mouse</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="first"><strong>Laufen</strong></td>
+                                        <td>Linker Joystick X-Achse</td>
+                                        <td>Linker Joystick X-Achse</td><td>A, D</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="first"><strong>Ducken</strong></td>
+                                        <td>Linker Joystick Y-Achse (-)</td>
+                                        <td>Linker Joystick Y-Achse (-)</td>
+                                        <td>S</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="first"><strong>Springen</strong></td>
+                                        <td>A</td>
+                                        <td>×</td>
+                                        <td>Space</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="first"><strong>Attack</strong></td>
+                                        <td>X</td>
+                                        <td>◻</td>
+                                        <td>Left Mouse</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="first"><strong>Health Potion</strong></td>
+                                        <td>B</td>
+                                        <td>○</td>
+                                        <td>E</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="first"><strong>Activate Power</strong></td>
+                                        <td>Y</td>
+                                        <td>△</td>
+                                        <td>Right Mouse</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <h4>Details</h4>
+                            <h5>Inhalt & Story</h5>
+                            <p>Ein kleiner Ritter kämpft sich durch die Welt und räumt alles, was sich ihm in den Weg stellt, konsequent aus dem Weg.
+                                <br><br>
+                                Doch wie lautet sein Name? Und wofür kämpft er überhaupt? Das weiß bislang niemand!
+                                Doch eines steht fest: Sein Zorn hat einen Grund und Tiny Knight wird gnadenlos weiterkämpfen, bis er erreicht hat, wonach er strebt…
+                                <br><br>
+                                <span style="font-style:italic;">
+                                    Das Spiel verrät zunächst wenig über die Beweggründe des Helden, der sich der feindlichen 
+                                    Übermacht stellt. Die Story, die in einer mittelalterlichen Welt spielt, wird nicht näher beleuchtet. Das Gameplay, auf dem 
+                                    der Fokus liegt, führt die Spielenden durch ein Karussell der Emotionen aus Spannung, Frust und Euphorie.
+                                </span>
+                            </p>
+                            <img src="./img/projects/wotk_pillars.jpg">
+                            <h5>Inspiration & Referenzen</h5>
+                            <img src="./img/projects/wotk_inspiration.png" style="max-width: 500px">
+                            <ul>
+                                <li>Dead Cells</li>
+                                <li>Foregone</li>
+                                <li>Blasphemous</li>
+                            </ul>
+                            <h5>Spielregeln & Mechanics</h5>
+                            <p>
+                                <span style="font-weight:bold;">Spielregeln</span><br>
+                                Der Character muss durch die einzelnen Level gesteuert werden, um zum Ausgang des Ziels zu gelangen. Dabei können auftretende 
+                                Hindernisse bekämpft oder umgangen werden.<br>
+                                Der Character besitzt eine Health-Bar, die bei gegnerischen Treffern und Verletzungen Schaden nimmt. Mit vollständiger Entleerung 
+                                der Health-Bar stirbt der Character und das Spiel muss vom Anfang des Levels neu aufgenommen werden.
+                                <br><br>
+                                Die verschiedenen Bewegungsmöglichkeiten des Characters, die einsetzbaren Waffen sowie die im Level versteckten Collectables 
+                                unterstützen beim Bezwingen der sich in den Weg stellenden Hindernisse.
+                            </p>
+                            <span style="font-weight:bold;">Mechanics</span><br>
+                            <img src="./img/projects/wotk_loop.png" style="max-width: 500px">
+                            <ul>
+                                <li>Steuerung des Characters mit Controller oder Maus & Keyboard durchs Level ohne Zeitlimit</li>
+                                <li>Hindernisse müssen bekämpft, überwunden oder umgangen werden</li>
+                                <li>Health-Bar des Characters schrumpft bei gegnerischen Treffern oder Verletzungen</li>
+                                <li>Stirbt der Character (leerer Health-Bar) muss das Level von Anfang an neu aufgenommen werden</li>
+                                <li>Unterstützt wird der Character durch seine Bewegungsmöglichkeiten, einsetzbare Waffen und durch im Level platzierte Collectables</li>
+                            </ul>
+                            <h5>Aesthetics</h5>
+                            <ul>
+                                <li>2D Pixelart</li>
+                                <li>Tiefe durch mehrere Ebenen; Parallaxe</li>
+                                <li>Düstere, entsättigte Umgebung mit dynamischen Lichtquellen als optische Highlights</li>
+                                <li>mittelalterliche Atmosphäre: Burgen, Verliese, Wälder, Seen</li>
+                                <li>Mischung aus "Retro"-Soundtrack und realistischen SFX</li>
+                            </ul>
+                            <p>
+                                Character/Enemies, Objekte und Umgebung im eher entsättigten 2D-Pixel-Art-Look wurden aus diversen externen Quellen zusammengestellt. 
+                                Mit genauem Blick wird erkenntlich, dass nicht mit einer einheitlichen Pixel-Größe für Sprites und Tilemaps gearbeitet wurde, 
+                                trotzdem wurde darauf Wert gelegt, dass alles möglichst gut zusammenpasst. Unterstützt wird das Zusammenspiel der Assets durch 
+                                Farbanpassungen und gesetzte Lichtquellen.<br>
+                                Die verwendeten Assets sind also vor allem eine kuratierte Sammlung aus frei verfügbarem Material, das teilweise aber auch abgeändert 
+                                oder neu kombiniert wurde, um den gewünschten Anforderungen zu entsprechen oder eigene Animationen zu entwickeln.
+                                <br><br>
+                                Das User Interface (Start- und Pausemenü) sowie das Graphic User Interface (im Spiel angezeigtes Inventar, aktuelle Waffe, Info-Bars etc.) 
+                                wurden selbst entwickelt unter Verwendung der im Level eingesetzten Sprites wie der Potion oder dem Character-Sprite.
+                                <br><br>
+                                Beim Sound wurde ebenfalls auf frei verfügbares Material gesetzt. So sind Feedback-Sounds/Sound-Effekte weitestgehend realistische 
+                                Foley-Sounds aus externen Quellen, teilweise fanden aber auch eigene SFX-Aufnahmen (Tiny Knight Sounds) statt.
+                                <br>
+                                Der Soundtrack, der das Level begleitet, wurde selbst von Paul S. komponiert und produziert.
+                            </p>
+                            <h5>Environment Design</h5>
+                            <p>
+                                Entsprechend des mittelalterlichen Hauptcharakters spielt sich das Geschehen in einer mittelalterlichen, düsteren Umgebung ab, die aus Wäldern, Wiesen, Seen, Burgen und Verliesen besteht.
+                                Die Gegner sowie deren Angriffe bzw. Waffen sind dem Setting angepasst und so trifft man beim Durchlaufen des Levels vor allem auf Ritter in schwerer Rüstung und starken Waffen (Heavy Bandits), aber auch auf Gegner, die aus der Luft angreifen (Flying Bat) oder Bogenschützen (Archer), die aus der Distanz feuern können.
+                                Dabei ist die Umgebung so angelegt, dass die Bewegungsmöglichkeiten geschickt eingesetzt werden müssen, um Abgründe zu überwinden, neue Bereiche zu ergründen oder Gegner auszuweichen, mit denen eine Konfrontation manchmal aber auch unumgänglich ist und sogar von Vorteil sein kann  (z.B. zum Auffüllen der Special Ability oder Erreichen neuer Health Potions).
+                                <br><br>
+                                <span style="font-weight:bold;">Heavy Bandit</span><br>
+                                Patrouilliert auf fest abgesteckten Bereichen und greift den Tiny Knight mit schweren Schwerthieben an, sobald dieser sich nah genug heranwagt.
+                                Folgt dem Tiny Knight auf kleineren Distanzen, lässt sich aber schnell abschütteln.
+                                <br><br>
+                                <span style="font-weight:bold;">Flying Bat</span><br>
+                                Fliegt auf der Stelle und scheint zunächst harmlos. Greift an, sobald sich der Tiny Knight in einem bestimmten Radius befindet und verfolgt diesen solange, bis er verletzt wurde.
+                                Nach einer Attacke wartet die Fledermaus auf einer neuen Position. Greift von oben an und kann manchmal schwer zu erreichen sein, ist aber nicht sonderlich stark.
+                                <br><br>
+                                <span style="font-weight:bold;">Archer</span><br>
+                                Kann Pfeile auf weite Distanz und in relativ hoher Geschwindigkeit abfeuern. Ist im Nahkampf nicht besonder ausgestattet.
+                            </p>
+                        </div>
+                    </div>    
+                </div>
+                <div class="wrapper wrapper-disabled" id="hidden-content">
+                    <div class="overlay-content" id="blender" >
+                        <div>
+                            <a class="close" onclick="hideContent('blender')"></a>
+                            <h3 class="overlay-hl" id="graphics">3D-Modeling:<br>Canon AE-1 (2022)</h3>
+                            <table>
+                                <tr>
+                                    <th>Idee:</th>
+                                    <td>3D Modellierung mit Blender</td>
+                                </tr>
+                                <tr>
+                                    <th>Kurs:</th>
+                                    <td>Computergrafik und -Animation</td>
+                                </tr>
+                                <tr>
+                                    <th>Semester:</th>
+                                    <td>4 (Media Systems, HAW Hamburg)</td>
+                                </tr>
+                                <tr>
+                                    <th>Software:</th>
+                                    <td>Blender (2.93.6)</td>
+                                </tr>
+                            </table>
+                            <div class="link-btn-box">
+                                <a href="https://github.com/LNDR-WST/codex" class="btn-link btn-github"></a>
+                                <a href="https://github.com/LNDR-WST/codex" class="btn-link btn-demo"></a>
+                                <a href="pdf/documentation.pdf" class="btn-link btn-pdf"></a>
+                            </div>
+                            <h4>Aufgabe</h4>
+                            <p>
+                                Die erlernten Grundlagen von Blender, die uns Studierenden im Kurs Computergrafik und -Animation 
+                                nähergebracht wurden, sollten zum Abschluss angewendet werden, um ein Objekt unserer Wahl zu 
+                                modellieren. Mindestvoraussetzung war, dass das später modellierte Objekt aus wenigstens zehn 
+                                Einzelteilen besteht und mit Materialien sowie Texturen versehen ist.
+                                <br><br>
+                                Als Vorlage diente eine Canon AE-1 Program Spiegelreflexkamera.
+                            </p>
+                            <h4>Ergebnis</h4>
+                            <p>
+                                Herausgekommen ist ein High-Poly-Model aus 81 Objekten mit insgesamt ~5.95 Mio. Faces (5&#8239;555&#8239;526 
+                                Vertices, 11&#8239;510&#8239;354 Edges, 11&#8239;909&#8239;630 Triangles).<br>
+                                Die Texturen für die unterschiedlichen Materialien stammen größtenteils aus externen Quellen, 
+                                Aufdrucke/Labels (inkl. Bump- bzw. Normal-Maps) wurden in Adobe Illustrator & Adobe Photoshop 
+                                selbst nachgebaut.
+                            </p>
+                        </div>
+                    </div>    
+                </div>
+                <div class="wrapper wrapper-disabled" id="hidden-content">
+                    <div class="overlay-content" id="three" >
+                        <div>
+                            <a class="close" onclick="hideContent('three')"></a>
+                            <h3 class="overlay-hl" id="graphics">Turntables (2022)</h3>
+                            <table>
+                                <tr>
+                                    <th>Idee:</th>
+                                    <td>Echtzeit-3D-Anwendung mit Three.JS</td>
+                                </tr>
+                                <tr>
+                                    <th>Kurs:</th>
+                                    <td>Computergrafik und -Animation</td>
+                                </tr>
+                                <tr>
+                                    <th>Semester:</th>
+                                    <td>4 (Media Systems, HAW Hamburg)</td>
+                                </tr>
+                                <tr>
+                                    <th>Sprachen:</th>
+                                    <td>JavaScript (Three.js), HTML</td>
+                                </tr>
+                            </table>
+                            <div class="link-btn-box">
+                                <a href="https://github.com/LNDR-WST/codex" class="btn-link btn-github"></a>
+                                <a href="https://github.com/LNDR-WST/codex" class="btn-link btn-demo"></a>
+                                <a href="pdf/documentation.pdf" class="btn-link btn-pdf"></a>
+                            </div>
+                            <h4>Aufgabe</h4>
+                            <p>
+                                Für die Prüfungsleistung sollte eine Echtzeit-3D-Anwendung mithilfe der JavaScript Bibliothek 
+                                Three.js entwickelt werden. <br>
+                                Hierfür sollte ein geladenes 3D-Modell mit einfachen Grundkörpern und den Möglichkeiten, die 
+                                Three.js mit sich bringt, nachgebaut werden. Dieser Nachbau sollte aus mind. zehn Einzelteilen 
+                                bestehen, sich mit Mausklicks (Raycasting) steuern lassen und durch diese Interaktion Animationen 
+                                ausführen. Diese Interaktion sollte dann auch für das geladene Modell adaptiert werden, wobei 
+                                freigestellt war, ob die Animationen händisch oder mit externer Software direkt an das Modell 
+                                gebunden werden.<br>
+                                Sämtliche in der Szene platzierten Objekte sollten außerdem physikalischen Kräften unterliegen 
+                                (Cannon.es) und miteinander kollidieren können. Zur Demonstration sollten die in der Vorlesung 
+                                gezeigte Möglichkeit zum Werfen physikalischer Bälle implementiert werden.
+                            </p>
+                            <h4>Ergebnis</h4>
+                            <p>
+                                Die entwickelte Szene zeigt zwei Plattenspieler, wovon der linke ein frei verfügbares, geladenes 
+                                Modell (GTLF, Texturen bearbeitet) ist und als Vorlage für den rechts stehenden Nachbau mit 
+                                Grundkörpern und Extrusionen diente.
+                            </p>
+                        </div>
+                    </div>    
+                </div>
+                <div class="wrapper wrapper-disabled" id="hidden-content">
+                    <div class="overlay-content" id="timetracker" >
+                        <div>
+                            <a class="close" onclick="hideContent('timetracker')"></a>
+                            <h3 class="overlay-hl" id="software">Timetracker (2022)</h3>
+                            <table>
+                                <tr>
+                                    <th>Idee:</th>
+                                    <td>Software zur projektbasierten Zeiterfassung</td>
+                                </tr>
+                                <tr>
+                                    <th>Kurs:</th>
+                                    <td>Software Engineering</td>
+                                </tr>
+                                <tr>
+                                    <th>Semester:</th>
+                                    <td>4 (Media Systems, HAW Hamburg)</td>
+                                </tr>
+                                <tr>
+                                    <th>Sprachen:</th>
+                                    <td>Java, SQL</td>
+                                </tr>
+                                <tr>
+                                    <th>Mitwirkende:</th>
+                                    <td>Kevin K., Moritz U., Paul S., Sven M.</td>
+                                </tr>
+                            </table>
+                            <div class="link-btn-box">
+                                <a href="https://github.com/LNDR-WST/codex" class="btn-link btn-github"></a>
+                                <a href="https://github.com/LNDR-WST/codex" class="btn-link btn-demo"></a>
+                                <a href="pdf/documentation.pdf" class="btn-link btn-pdf"></a>
+                            </div>
+                            <h4>Aufgabe</h4>
+                            <p>
+                                Im Zuge des Kurses Software Engineering wurde anhand einer Fallstudie zur Analyse, 
+                                Planung und Umsetzung von Software das nachfolgende Projekt umgesetzt. Die Kursinhalte 
+                                fokussierten sich auf den Prozess des Software Engineerings, der anhand einer selbstgewählten 
+                                Aufgabe komplett durchlaufen werden sollte.
+                            </p>
+                            <h4>Ergebnis</h4>
+                            <p>
+                                Die Zielsetzung unseres fünfköpfigen Teams war eine möglichst plattformunabhängige 
+                                (Windows, MacOs, Linux) Software zum Erfassen von projektbasierter Arbeitszeit (mit Fokus auf 
+                                Freelancer). <br>
+                                Mit diesem übergeordneten Vorhaben wurden die Anforderungsanalyse betrieben, das Vorgehensmodell 
+                                ausgewählt, die Software geplant (Architektur, Software-Pattern, Datenbankstruktur) und schließlich 
+                                umgesetzt (nach priorisierten Features) und getestet.<br>
+                                Gearbeitet und organisiert wurde sich mit dem Scrumban-Modell, das aufgrund der knappen Zeit für 
+                                unsere Zwecke leicht angepasst wurde.
+                            </p>
+                        </div>
+                    </div>    
+                </div>
+                <div class="wrapper wrapper-disabled" id="hidden-content">
+                    <div class="overlay-content" id="codex" >
+                        <div>
+                            <a class="close" onclick="hideContent('codex')"></a>
+                            <h3 class="overlay-hl" id="web">Codex (2020)</h3>
+                            <table>
+                                <tr>
+                                    <th>Idee:</th>
+                                    <td>Code-Plattform "CODEX"</td>
+                                </tr>
+                                <tr>
+                                    <th>Kurs:</th>
+                                    <td>Angewandte Programmierung</td>
+                                </tr>
+                                <tr>
+                                    <th>Semester:</th>
+                                    <td>2 (Media Systems, HAW Hamburg)</td>
+                                </tr>
+                                <tr>
+                                    <th>Sprachen:</th>
+                                    <td>Javascript (Node.js), HTML, CSS</td>
+                                </tr>
+                                <tr>
+                                    <th>Hauptaufgaben:</th>
+                                    <td>Screendesign, Frontend, Backend</td>
+                                </tr>
+                                <tr>
+                                    <th>Mitwirkende:</th>
+                                    <td>Moritz U., Mehmet B., Christopher S.</td>
+                                </tr>
+                            </table>
+                            <div class="link-btn-box">
+                                <a href="https://github.com/LNDR-WST/codex" class="btn-link btn-github"></a>
+                                <a href="https://github.com/LNDR-WST/codex" class="btn-link btn-demo"></a>
+                            </div>
+                            <h4>Aufgabe</h4>
+                            <p>
+                                Erstellt werden sollte eine Webanwendung im Team. Grundlage der Anwendung sollte Node.js in Verbindung mit dem 
+                                in der Veranstaltung vorgestellten Framework Express.js und weiteren Packages wie Embedded Javascript (EJS), bcrypt, 
+                                Cookie-Parser, Express-Session, Express-Fileupload und der Datenbank SQLite3 sein. Neben Verwendung dieser Packages 
+                                sollte eine Login-Funktion implementiert werden, die bestimmte Bereiche nur für angemeldete User zugänglich macht.
+                            </p>
+                            <h4>Ergebnis</h4>
+                            <p>
+                                Umgesetzt wurde eine Code-Datenbank, die eine Lösung zum Speichern von Code-Snippets verschiedenster Sprachen in einem 
+                                Profil ermöglichen sollte. Darüber hinaus sollte die Möglichkeit bestehen, auch die gespeicherten Code-Snippets anderer 
+                                User zu durchstöbern und zu favorisieren.
+                                Als Code-Editor wurde CodeMirror eingebunden.<br>
+                                Das Design (Aussehen) der Seite war für den Kurs zwar irrelevant und wurde nicht explizit gelehrt, aber trotzdem von 
+                                uns geplant und berücksichtigt. Um sich stärker mit den gestalterischen Aspekten auseinanderzusetzen, wurde auf ein Framework dafür verzichtet.
+                            </p>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+            <br>
+        </div>
+        <!-- Overlay Content-Toggle -->
+        <script>
+        function showContent(id) {
+            document.getElementById('nav').style.visibility = "hidden";
+            document.body.style.overflow = "hidden";
+            document.getElementById(id).style.opacity = 100;
+            document.getElementById(id).style.visibility = "visible"; 
+          }
+          
+          function hideContent(id) {
+            document.getElementById('nav').style.visibility = "visible";
+            document.body.style.overflow = "visible";
+            document.getElementById(id).style.opacity = 0;
+            document.getElementById(id).style.visibility = "hidden";
+          }
+        </script>
+        <!-- Navigation Hide -->
+        <script>
+            let prevScrollpos = window.pageYOffset;
+            window.onscroll = function() {
+            let currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById("nav").style.top = "0";
+            } else if (prevScrollpos < currentScrollPos && prevScrollpos >= 0) {
+                document.getElementById("nav").style.top = "-57px";
+            }
+            prevScrollpos = currentScrollPos;
+            } 
+        </script>
+    </body>
+</html>
