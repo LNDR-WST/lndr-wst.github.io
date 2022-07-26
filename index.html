@@ -241,8 +241,14 @@
                                 Am Ende kam ein spielbarer Prototyp heraus, der zwar nicht gänzlich fehlerfrei ist, aber insgesamt schon ein gutes 
                                 Spielgefühl vermittelt und Spielidee, Mechanics, den Core Gameplay Loop sowie die Game Design Pillars transportiert.
                             </p>
-                            <div class="iframe-container">
-                                <iframe loading="lazy" allowfullscreen="true" scrolling="no" id="game_drop" allowtransparency="true" webkitallowfullscreen="true" mozallowfullscreen="true" msallowfullscreen="true" src="https://v6p9d9t4.ssl.hwcdn.net/html/4058575/WoTK_build/index.html" allow="autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad; gyroscope; accelerometer; xr; cross-origin-isolated" frameborder="0"></iframe>
+                            <script>
+                                function showIframe() {
+                                    document.getElementById('iframe-container').style.setProperty('display', 'block')
+                                }
+                            </script>
+                            <a class="button" style="margin: 4em 2em;" href="https://itch.io/embed-upload/4058575?color=333333" target="wotk-iframe" onclick="showIframe()">Play Game!</a>
+                            <div class="iframe-container" id="iframe-container" style="display:none;">
+                                <iframe name="wotk-iframe" src="about:blank" allowfullscreen="" width="1280" height="740" frameborder="0"><a href="https://mightymo.itch.io/tinyknight">Play Wrath of Tiny Knight on itch.io</a></iframe>
                             </div>
                             <table class="normal">
                                 <caption>Steuerung</caption>
