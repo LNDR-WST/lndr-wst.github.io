@@ -9,12 +9,12 @@
         <script  src="https://code.jquery.com/jquery-3.5.1.min.js"  crossorigin="anonymous"></script>
         <!-- Meta -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>[LNDR]</title>
+        <title>LNDR</title>
     </head>
     <body>
         <div class="navparent" id="nav">
             <div class="navbar">
-                <a href="/"><div id="logosvg"><span id="btn-home">[&nbsp;LNDR&nbsp;]</span></div></a>
+                <a href="/"><div id="logosvg"><span id="btn-home">LNDR</span></div></a>
                 <!-- Burger-Menu -->
                 <!-- <div class="nav-burger-container">
                     <input class="inputboxburger" type="checkbox" id="menuToggle"></input>
@@ -94,6 +94,19 @@
                     </div>
                     <div class="card software">
                         <div class="card-header">
+                            <img src="./img/projects/mischifischi_screen.jpg">
+                        </div>
+                        <div class="card-content">
+                            <div id="card-tag-wrapper">
+                                <div id="card-tag">Software</div>
+                            </div>
+                            <p id="card-headline">MischiFischi App</p>
+                            <p id="card-info">Mit <i>React Native</i> entwickelte App zum Erstellen eigener Fisch-Grafiken</p>
+                        </div>                        
+                        <div id="card-btn" onclick="showContent('mischifischi')"><a>Details</a></div>
+                    </div>
+                    <div class="card software">
+                        <div class="card-header">
                             <img src="./img/projects/timetracker_screen.jpg">
                         </div>
                         <div class="card-content">
@@ -117,6 +130,19 @@
                             <p id="card-info">Mit Node.js entwickelte Web-Plattform zum Austausch von Code-Snippets</p>
                         </div>                        
                         <div id="card-btn" onclick="showContent('codex')"><a>Details</a></div>
+                    </div>
+                    <div class="card data-science">
+                        <div class="card-header">
+                            <img src="./img/projects/dmc_screen.jpg">
+                        </div>
+                        <div class="card-content">
+                            <div id="card-tag-wrapper">
+                                <div id="card-tag">Data Science</div>
+                            </div>
+                            <p id="card-headline">Data Mining Cup 2022<br>(16. Platz)</p>
+                            <p id="card-info">Kaufvorhersage auf Grundlage der Bestellhistorie</p>
+                        </div>                        
+                        <!-- <div id="card-btn" onclick="showContent('codex')"><a>Details</a></div> -->
                     </div>
                     
                     <i aria-hidden="true"></i>
@@ -490,12 +516,213 @@
                                 Sämtliche in der Szene platzierten Objekte sollten außerdem physikalischen Kräften unterliegen 
                                 (Cannon.es) und miteinander kollidieren können. Zur Demonstration sollten die in der Vorlesung 
                                 gezeigte Möglichkeit zum Werfen physikalischer Bälle implementiert werden.
+                                <br><br>
+                                Zur Realisierung durften ausschließlich die in der Vorlesung genutzten Bibliotheken verwendet werden, 
+                                die über dieselben Pfade wie in den Kursbeispielen geladen werden sollen.<br>
+                                Darunter:
+                                <ul>
+                                    <li>Cannon.es 0.18.0</li>
+                                    <li>Cannon.es Debugger 0.1.4</li>
+                                    <li>Dat.Gui 0.7.7</li>
+                                    <li>Three.js r134</li>
+                                    <li>Three.csg 2020</li>
+                                    <li>Tween.js 18.6.4</li>
+                                </ul>
                             </p>
                             <h4>Ergebnis</h4>
                             <p>
-                                Die entwickelte Szene zeigt zwei Plattenspieler, wovon der linke ein frei verfügbares, geladenes 
-                                Modell (GTLF, Texturen bearbeitet) ist und als Vorlage für den rechts stehenden Nachbau mit 
-                                Grundkörpern und Extrusionen diente.
+                                Hauptbestandteil des hier realisierten Demonstrators ist der (rechte) Plattenspieler, welcher auf Grundlage des linken
+                                von einer externen Quelle stammenden Plattenspielers entstanden ist und als Vorlage für den rechts stehenden Nachbau mit 
+                                Grundkörpern und Extrusionen diente.<br>
+                                Bei der Originaldatei des geladenen Plattenspielers handelte es sich um eine FBX-Datei, die mithilfe der Software
+                                Blender in das geforderte GLTF exportiert wurde. In diesem Zuge wurden die Texturen sowie Farbgebungen leicht angepasst
+                                und Animationen erstellt. Die Geometrien selbst blieben unverändert.
+                                Die (angepassten) Texturen des geladenen Plattenspielers wurden im Großen und Ganzen ebenfalls für den Nachbau in
+                                Three.js verwendet.
+                                <br><br>
+                                Für ein stimmigeres Gesamtbild der Szene wurden die Plattenspieler zusammen mit zwei Lautsprechern auf einem Möbelstück platziert.
+                                Diese Modelle stammen ebenfalls aus einer externen Quelle, wurden nur minimal korrigiert und wie die Vorlage des
+                                Plattenspielers als GLTF in die Three.js-Szene geladen.
+                            </p>
+                            <h4>Features</h4>
+                            <strong>Kamera</strong><br>
+                            <ul>
+                                <li>
+                                    <strong>Linke Maustaste (1-Finger-Touch):</strong><br>
+                                    Rotation
+                                </li><br>
+                                <li>
+                                    <strong>Mausrad (Pinch):</strong><br>
+                                    Zoom
+                                </li><br>
+                                <li>
+                                    <strong>Rechte Maustaste (2-Finger-Touch):</strong><br>
+                                    Pan
+                                </li><br>
+                            </ul>
+                            <strong>Plattenspieler</strong><br>
+                            <p>
+                                Beide Plattenspieler können durch Mausklicks (linke Maustaste) oder Tap gesteuert werden.<br>
+                                Dabei sind folgende Aktionen möglich:
+                            </p>
+                            <ul>
+                                <li>
+                                    <strong>On-Off-Switch:</strong><br>
+                                    Einschalten des Plattenspielers (rotes Licht als Indikator am Power-Switch)
+                                </li><br>
+                                <li>
+                                    <strong>Start/Stop-Button:</strong><br>
+                                    Starten/Stoppen der Drehschreibe
+                                </li><br>
+                                <li>
+                                    <strong>Nadellicht:</strong><br>
+                                    Hoch- und Runterdrücken des Nadellichtzylinders (links runter, rechts hoch)
+                                </li><br>
+                                <li>
+                                    <strong>45/33 RPM Buttons:</strong><br>
+                                    Ändern der Abspielgeschwindigkeit
+                                </li><br>
+                                <li>
+                                    <strong>Arm:</strong><br>
+                                    Ein Klick auf den Arm senkt bzw. hebt diesen (wenn die Platte nicht läuft)
+                                </li><br>
+                            </ul>
+                            <p>
+                                Läuft der Plattenspieler (Drehscheibe mit Platte drehen sich) und befindet sich der Arm (mit Nadel) auf der
+                                Schallplatte, wird Musik abgespielt. Beide Plattenspieler spielen unabhängig voneinander Musik ab.<br>
+                                Ist die Musik zuende, die Nadel aber weiterhin auf der Schallplatte und dreht sich die Scheibe weiterhin, hört man
+                                die Platte rauschen/knacken.<br>
+                                Die Abspielgeschwindigkeit des Sounds kann verändert werden, die sichtbare Drehgeschwindigkeit bleibt dieselbe.
+                            </p>
+                            <strong>Lautsprecher</strong>
+                            <p>
+                                Die Lautsprecher geben die von den Plattenspielern abgespielte Musik wieder. Sie sind mit "Positional Audio" so
+                                eingestellt, dass der gut hörbare Bereich auch vor diesen Lautsprechern liegt.Bewegt sich die Kamera hinter die
+                                Lautsprecher oder sehr weit von diesen weg, nimmt die Lautstärke der Sounds ab.
+                            </p>
+                            <strong>Physik</strong>
+                            <p>
+                                Die Szene und die sich darin befindenden Objekte sind mit physikalischen Eigenschaften ausgestattet (Schwerkraft und
+                                Masse). Um Kollisionen zu verursachen können mit einem Klick auf die Leertaste Tennisbälle geschossen werden.<br>
+                                Die Flugrichtung der Tennisbälle orientiert sich ausgehend von der Kamera an der aktuellen Mauszeigerposition, wodurch
+                                grob gezielt werden kann.<br>
+
+                                <ul>
+                                    <li>
+                                        <strong>Leertaste + Mauszeiger (Zwei-Finger-Tap):</strong><br>
+                                        Zielen + Schuss/Wurf eines Tennisballs
+                                    </li>
+                                </ul>
+
+                                Die Plattenspieler sowie die Lautsprecher sind dynamische Körper, d.h. sie reagieren auf Kollisionen und werden von
+                                diesen beeinflusst. Der Schranktisch hingegen ist statisch: Objekte kollidieren mit diesem Körper, der Körper selbst
+                                reagiert aber nicht auf diese Kollisionen. Hintergrund ist, dass aufeinander gestapelte Boxen mit physikalischen
+                                Eigenschaften (Cannon.js) sehr unstabil sind und auf Dauer nicht still stehen (somit darauf platzierte Objekte mit der
+                                Zeit herunterfallen).<br>
+                                Das Problem lässt sich auch in einem der offiziellen Beispiele nachvollziehen:<br>
+                                <a href="http://schteppe.github.io/cannon.js/demos/convex.html">http://schteppe.github.io/cannon.js/demos/convex.html</a> ("convex on convex").
+                            </p>
+                            <strong>GUI</strong>
+                            <p>
+                                <strong>Light Color & Light Intensity</strong><br>
+                                Das Lichtsetting lässt sich mit dem sich am rechten oberen Rand befindlichen Graphic User Interface einstellen.
+                                Die Position der Lichtquellen ist dabei fest, je ein Spotlight verfolgt aber einen der Plattenspieler.<br>
+                                Die Lichtstimmung kann über die Intensität der vorhandenen Lichtquellen sowie die Farbgebung (getrennte RGB-Werte, wobei
+                                die Werte 0-1 in dem GUI die RGB-Werte von 0-255 abbilden.
+                                <br><br>
+                                <strong>General</strong><br>
+                                Über die Buttons im Bereich "General" lassen sich die Positionen der Objekte zurücksetzen, geschossene Tennisbälle
+                                wieder entfernen (z.B. bei Performance-Einbrüchen) und die Objekte als Wireframe anzeigen (entweder alle oder nur den
+                                nachgebauten Plattenspieler).<br>
+                                Der Taste "Stop Aud&Anim" stoppt alle laufenden Tweens und pausiert laufende Audiospuren.
+                            </p>
+                        </div>
+                    </div>    
+                </div>
+                <div class="wrapper wrapper-disabled" id="hidden-content">
+                    <div class="overlay-content" id="mischifischi" >
+                        <div>
+                            <a class="close" onclick="hideContent('mischifischi')"></a>
+                            <h3 class="overlay-hl" id="software">MischiFischi (2022)</h3>
+                            <table>
+                                <tr>
+                                    <th>Projekt:</th>
+                                    <td>Fisch-Creator-App mit Projektionsanbindung</td>
+                                </tr>
+                                <tr>
+                                    <th>Kurs:</th>
+                                    <td>Mobile Systeme</td>
+                                </tr>
+                                <tr>
+                                    <th>Semester:</th>
+                                    <td>5 (Media Systems, HAW Hamburg)</td>
+                                </tr>
+                                <tr>
+                                    <th>Sprachen:</th>
+                                    <td>JavaScript (React Native Framework)</td>
+                                </tr>
+                                <tr>
+                                    <th>Mitwirkende:</th>
+                                    <td>Anastasia E., Moritz U.</td>
+                                </tr>
+                            </table>
+                            <img src="./img/projects/mischifischi_main.jpg">
+                            <a class="attribution" href="https://de.freepik.com/psd/mobile-app">Mobile app PSD erstellt von rezaazmy - de.freepik.com</a>
+                            <div class="link-btn-box">
+                                <a href="https://github.com/SirMightyMo/MischiFischi" class="btn-link btn-github"></a>
+                                <a href="https://mischifischiserver.herokuapp.com/getapp" class="btn-link btn-demo"></a>
+                            </div>
+                            <h4>Aufgabe</h4>
+                            <p>
+                                Das ursprüngliche Vorhaben des Kurses <i>Mobile Systeme</i> (Wahlpflichtfach im Studiengang Media Systems; auch <i>MOSY</i> genannt) 
+                                im Sommersemester 2022 war es, für eine Ausstellung am Department Medientechnik der Hochschule für Angewandte Wissenschaften zusammen 
+                                mit dem Kurs <i>IT-Systeme</i> (Pflichtmodul im Studiengang Medientechnik; auch <i>ITS</i> genannt) eine Ausstellung zu einem Thema 
+                                der <i>Sustainable Development Goals</i> zu realisieren. <br>
+                                Der Kurs IT-Systeme, in dessen Verantwortung die Organisation und Umsetzung der medientechnischen Ausstellung lag, hat sich dabei auf 
+                                das Thema <strong>LIFE BELOW WATER: Conserve and sustainably use the oceans, seas and marine resources for sustainable development </strong>
+                                geeinigt. <br>
+                                Hierzu sollten medientechnische Installationen bspw. mit Projektoren, Beschallungsanlagen, Motoren etc. umgesetzt werden, die durch 
+                                Anwendungen des Kurses Mobile Systeme interaktiv gesteuert werden können sollten. Als Steuerzentrale der Ausstellungstechnik diente die 
+                                knotenbasierte Software und Entwicklungsumgebung <i>TouchDesigner</i> der Firma Derivative, die vom ITS-Kurs verwaltet wird und gleichzeitig 
+                                die Schnittstelle für die Interaktion zwischen mobiler Anwendung und IT-System darstellt.<br>
+                                Unser Team des MOSY-Kurses hat sich mit einer der zwei Gruppen des ITS-Kurses zusammengetan, um eine Projektionsfläche zu bespielen.
+                                <br><br>
+                                Die Aufgabe war es, ein mobiles System zu entwickeln, das mit der vom ITS-Team bereitgestellten Projektion interagieren bzw. diese 
+                                beeinflussen kann.<br>
+                                Unter der thematischen Grundidee ein Bewusstsein zum Erhalt der Artenvielfalt in Ozeanen schaffen, wollten wir eine App entwickeln, 
+                                in der sich mithilfe eines Baukastensystems eigene Fische aus vorgefertigten „Fisch-Bausteinen“ erstellen lassen. Diese sollten dann 
+                                von der App an eine Projektion (mit dem TouchDesigner als Schnittstelle) oder an einen Bildschirm gesendet werden können und dort gemäß 
+                                der Idee wie in einem „digitalen Ozean“ herumschwimmen.
+                                <br><br><br>
+                                Die App sollte mit dem Command Line Interface <strong>Expo</strong> und dem Framework <strong>React Native</strong> umgesetzt, 
+                                das Projekt an sich mit Scrum (Vorgehensmodell) geplant und bearbeitet werden.
+                            </p>
+                            <h4>Ergebnis</h4>
+                            <img src="./img/projects/mischifischi_projection.jpg">
+                            <a class="attribution" href='https://de.freepik.com/psd/mockup'>Mockup PSD erstellt von rawpixel.com - de.freepik.com</a>
+                            <p>
+                                In drei je dreiwöchigen Sprints ist eine App für iOS und Android entstanden, die (aufgrund der strengen Restriktionen seitens der 
+                                App-Stores) nur über Expo zugänglich gemacht wurde.
+                                <br><br>
+                                Mittels eines Baukastensystems und unterschiedlichen Bestandteilen wie Farben, Mustern und Formen kann ein selbst gestalteter Fisch 
+                                erstellt, exportiert und (zum Zeitpunkt der Ausstellung) an die Projektion gesendet werden.<br>
+                                Außerdem kann zusätzlich ein Text versendet werden, der Lösungsvorschläge zum Erreichen der Nachhaltigkeitsziele beinhaltet, welcher 
+                                ebenfalls innerhalb der Projektion dargestellt wird.
+                                <br><br>
+                                Die Anwendung beinhaltet zwei Hauptbereiche: Den <i>Build-Screen</i> und den <i>Collection-Screen</i>.<br>
+                                Im Build-Screen kann aus den verschiedenen Bausteinen ein eigener Fisch erstellt werden, im Collection-Screen finden sich alle Fische, 
+                                die bisher erstellt wurden, und konnten hierüber an die Ausstellungsprojektion gesendet werden. Der Build-Screen beinhaltet außerdem die 
+                                Möglichkeit, den aktuell bearbeiteten Fisch in die Foto-Bibliothek des Smartphones zu exportieren.
+                                <br><br>
+                                Die Anbindung an die Ausstellungsprojektion erfolgte über einen Websocket, der sich mit dem im lokalen HAW-Netzwerk befindlichen 
+                                TouchDesigner-Server verbunden hat.<br>
+                                Um flexibel in der Websocket-Adresse bleiben und bei Bedarf auch noch kurz vor oder sogar während der Ausstellung die 
+                                Websocket-Adresse anpassen zu können, wurde außerdem ein externer Webserver aufgesetzt, über den die IP-Adresse manuell jederzeit geändert 
+                                werden kann. Die Anwendung verbindet sich bei jedem Aufruf des Collection-Screens mit diesem Webserver, um die aktuelle Adresse 
+                                abzurufen und bei Bedarf zu ändern.
+                                <br><br><br>
+                                Über den Websocket wird ein JSON, das eine UUID, den Text und den erstellten Fisch als SVG beinhaltet, an den TouchDesigner übermittelt, dessen 
+                                Programmierung vom ITS-Team vorgenommen wurde, um die übermittelten Fische schließlich auf einer ozeanähnlichen Projektion darzustellen.
                             </p>
                         </div>
                     </div>    
@@ -611,6 +838,48 @@
                             </p>
                             <img src="./img/projects/codex_main2.jpg">
                             <a class="attribution" href='https://www.freepik.com/psd/presentation-mockup'>Presentation mockup psd created by rezaazmy - www.freepik.com</a>
+                            <p>
+                                Die im Rahmen des Projekts umgesetzten Funktionen der Anwendung beinhalten dabei folgendes:
+                            </p>
+                            <strong>Benutzerfunktionen</strong><br>
+                            <ul>
+                                <li>Benutzerregistrierung & -login</li>
+                                <li>Ändern von persönlichen Einstellungen:</li>
+                                <ul>
+                                    <li>Profilbild-Upload</li>
+                                    <li>Passwort ändern</li>
+                                    <li>E-Mailadresse ändern</li>
+                                    <li>Darkmode an-/ausschalten</li>
+                                </ul>
+                            </ul>
+                            <strong>Profilfunktionen</strong><br>
+                            <ul>
+                                <li>Eigenes Profil mit gesamten (eigenen) Snippets aufrufen</li>
+                                <li>Neues Snippet anlegen</li>
+                                <li>Vorhandene Snippets bearbeiten</li>
+                                <li>Bestehende Snippets löschen</li>
+                            </ul>
+                            <strong>Fremdprofilfunktionen</strong><br>
+                            <ul>
+                                <li>Liste anderer Benutzer:innen einsehen</li>
+                                <li>Fremdes Profil mit gesamten Snippets aufrufen</li>
+                                <li>Fremde Code-Snippets favorisieren (in eigenen Favoriten speichern)</li>
+                            </ul>
+                            <strong>Administration</strong><br>
+                            <ul>
+                                <li>Liste aller Benutzer:innen anzeigen lassen</li>
+                                <li>Bearbeiten sämtlicher Benutzerdaten</li>
+                                <li>Hinzufügen neuer Benutzer:innen</li>
+                                <li>entfernen bestehender Benutzer:innen</li>
+                            </ul>
+                            <p>
+                                Über die Webanwendung sollten sich Nutzer:innen registrieren und nach Anmeldung recherchierte oder selbst geschriebene, 
+                                nützliche Code-Snippets abspeichern können, um sich diese für spätere Situationen zu merken. Diese Codes sollten je Nutzer:in 
+                                auf einer eigenen Profilseite dargestellt und außerdem zu jedem Snippets eine Überschrift sowie ein kurzer beschreibender 
+                                Text angezeigt werden, ebenso wie der letzte Bearbeitungszeitpunkt und die eingestellte Syntax/Sprache.
+                                <br><br>
+                                Die Profile sowie die entsprechend eingestellten Codes sind unter allen Nutzer:innen gegenseitig einsehbar.
+                            </p>
                         </div>
                     </div>    
                 </div>
