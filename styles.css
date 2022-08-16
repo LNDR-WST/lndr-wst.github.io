@@ -415,6 +415,12 @@ video {
   width: 100%;
 }
 
+.tablecontainer {
+  max-height: 45vh;
+  overflow: auto;
+  margin-bottom: 4em;
+  max-width: 85vw;
+}
 
 table {
   margin: 0.5em 0 0.5em 0;
@@ -441,6 +447,11 @@ table.normal tr {
   display: table-row;
 }
 
+table.normal tr.highlight {
+  font-weight: bold;
+  color: red;
+}
+
 table.normal th, table.normal td {
   padding: 0.5em;
   font-size: 0.8em;
@@ -448,6 +459,11 @@ table.normal th, table.normal td {
 
 table.normal th {
   border-bottom: 1px dashed #ff0b44;
+  background-color: #131313;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 2;
 }
 
 table.normal .first {
@@ -803,18 +819,12 @@ img {
   video {
     max-width: 90vw;
   }
-  table.normal th, table.normal td {
-    font-size: 0.6vmax;
-  }
 }
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) { 
   body {
     font-size: 16px;
-  }
-  table.normal th, table.normal td {
-    font-size: 0.85vmax;
   }
 }
 
