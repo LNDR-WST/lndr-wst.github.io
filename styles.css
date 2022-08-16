@@ -200,7 +200,7 @@ video {
   color: black;
 }
 
-#hidden-content p, ul {
+#hidden-content p,#hidden-content ul {
   color: whitesmoke;
 }
 
@@ -513,7 +513,7 @@ a.attribution {
   color: gray;
 }
 
-#section ul {
+ul {
   max-width: 80%;
   font-size: 0.8em;
   /* width: 100%; */
