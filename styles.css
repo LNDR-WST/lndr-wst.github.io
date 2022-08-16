@@ -808,7 +808,7 @@ img {
     font-size: 16px;
   }
   h1 {
-    font-size: 6em;
+    font-size: 3.5em;
   }
   h2 {
     font-size: 3em;
@@ -825,6 +825,9 @@ img {
 @media (min-width: 576px) and (max-width: 767.98px) { 
   body {
     font-size: 16px;
+  }
+  h1 {
+    font-size: 6em;
   }
 }
 
