@@ -196,6 +196,14 @@ video {
   margin: 3em 0 3em 0;
 }
 
+#section p,#section ul {
+  color: black;
+}
+
+#hidden-content p, ul {
+  color: whitesmoke;
+}
+
 #cardwrapper {
   display: flex;
   flex-direction: row;
@@ -505,7 +513,7 @@ a.attribution {
   color: gray;
 }
 
-ul {
+#section ul {
   max-width: 80%;
   font-size: 0.8em;
   /* width: 100%; */
