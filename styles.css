@@ -560,7 +560,15 @@ img {
   width: 56px;
   height: 56px;
   border-radius: 28px;
+  border: solid 2px grey;
   transition: all 0.2s ease-in-out 0s;
+}
+
+.btn-link::after {
+  align-self: end;
+  margin-bottom: -1.5em;
+  font-size: 0.6em;
+  color: grey;
 }
 
 .btn-link:hover {
@@ -571,20 +579,40 @@ img {
   background: white center no-repeat url('img/icons/gh-cat.svg');
   background-size: 80%;
 }
+.btn-github::after {
+  content: "GitHub";
+}
 
 .btn-demo {
   background: white center no-repeat url('img/icons/demo.svg');
   background-size: 80%;
 }
+.btn-demo::after {
+  content: "Demo";
+}
 
 .btn-download {
   background: white center no-repeat url('img/icons/download.svg');
-  background-size: 80%;
+  background-size: 50%;
+}
+.btn-download::after {
+  content: "Download";
 }
 
 .btn-pdf {
   background: white center no-repeat url('img/icons/pdf.svg');
   background-size: 70%;
+}
+.btn-pdf::after {
+  content: "Info";
+}
+
+.btn-article {
+  background: white center no-repeat url('img/icons/newspaper.svg');
+  background-size: 70%;
+}
+.btn-article::after {
+  content: "Article";
 }
 
 .overviewslide {
@@ -775,12 +803,18 @@ img {
   video {
     max-width: 90vw;
   }
+  table.normal th, table.normal td {
+    font-size: 0.6vmax;
+  }
 }
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) { 
   body {
     font-size: 16px;
+  }
+  table.normal th, table.normal td {
+    font-size: 0.85vmax;
   }
 }
 
