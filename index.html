@@ -207,8 +207,20 @@
                                 <br><br>
                                 Zur Realisierung des Prototyps wurden diverse frei erhältliche Game-Assets und Sounds verwendet.
                             </p>
-                            <div class="iframe-container">
-                                <iframe allowFullScreen="allowFullScreen" src="https://www.youtube.com/embed/OtM3HaeACZM?ecver=1&amp;iv_load_policy=3&amp;rel=0&amp;showinfo=0&amp;yt:stretch=16:9&amp;autohide=1&amp;color=white&amp;width=500&amp;width=500" width="500" height="315" style="align-self: center;" allowtransparency="true" frameborder="0"></iframe>
+
+                            <div class="iframe-container" style="background: center / contain no-repeat url('./img/projects/fah_yt-thumb.jpg');">
+                                <div class="consent" id="consent-fah">
+                                    <p>
+                                        <b style="color: red;">Externer Inhalt von YouTube</b><br>
+                                        Es benötigt Ihre aktive Einwilligung, um den YouTube-Inhalt anzuzeigen. Ihre Einwilligung geben Sie durch das Umlegen des Schalters (Aktivieren der Checkbox).
+                                        Der Inhalt wird anschließend geladen.
+                                    </p>
+                                    <div>
+                                        <input class="consent-chk" type="checkbox" id="consent-input-fah" name="consent-input-fah" onchange="checkInput('consent-input-fah')">
+                                        <label for="consent-input-fah">Ich bin damit einverstanden, dass mir der externe Inhalt angezeigt wird. Damit können personenbezogene Daten an YouTube (Google) übermittelt werden.</label>
+                                    </div>
+                                </div>
+                                <iframe id="iframe-fah" allowFullScreen="allowFullScreen" width="500" height="315" style="align-self: center;" allowtransparency="true" frameborder="0"></iframe>
                             </div>
                         </div>
                     </div>    
@@ -273,9 +285,20 @@
                                     document.getElementById('iframe-container').style.setProperty('display', 'block')
                                 }
                             </script>
-                            <a class="button" style="margin: 4em 2em;" href="https://itch.io/embed-upload/4058575?color=333333" target="wotk-iframe" onclick="showIframe()">Play Game!</a>
-                            <div class="iframe-container" id="iframe-container" style="display:none;">
-                                <iframe name="wotk-iframe" src="about:blank" allowfullscreen="" width="1280" height="740" frameborder="0"><a href="https://mightymo.itch.io/tinyknight">Play Wrath of Tiny Knight on itch.io</a></iframe>
+                            <!-- <a class="button" style="margin: 4em 2em;" href="https://itch.io/embed-upload/4058575?color=333333" target="wotk-iframe" onclick="showIframe()">Play Game!</a> -->
+                            <div class="iframe-container" style="background: center / contain no-repeat url('./img/projects/wotk_game-thumb.jpg');">
+                                <div class="consent" id="consent-wotk">
+                                    <p>
+                                        <b style="color: red;">Externer Inhalt von itch.io</b><br>
+                                        Es benötigt Ihre aktive Einwilligung, um den Itch-Inhalt anzuzeigen. Ihre Einwilligung geben Sie durch das Umlegen des Schalters (Aktivieren der Checkbox).
+                                        Der Inhalt wird anschließend geladen.
+                                    </p>
+                                    <div>
+                                        <input class="consent-chk" type="checkbox" id="consent-input-wotk" name="consent-input-wotk" onchange="checkInput('consent-input-wotk')">
+                                        <label for="consent-input-wotk">Ich bin damit einverstanden, dass mir der externe Inhalt angezeigt wird. Damit können personenbezogene Daten an Itch.io übermittelt werden.</label>
+                                    </div>
+                                </div>
+                                <iframe id="iframe-wotk" name="wotk-iframe" allowfullscreen="" width="1280" height="740" frameborder="0"><a href="https://mightymo.itch.io/tinyknight">Play Wrath of Tiny Knight on itch.io</a></iframe>
                             </div>
                             <table class="normal">
                                 <caption>Steuerung</caption>
@@ -2879,6 +2902,41 @@
             }
             prevScrollpos = currentScrollPos;
             } 
+        </script>
+        <!-- (De)Activate iFrame on checkbox change -->
+        <script>
+            function loadIFrame(id) {
+                let source;
+                switch(id) {
+                    case 'fah':
+                        source = "https://www.youtube.com/embed/OtM3HaeACZM?ecver=1&amp;iv_load_policy=3&amp;rel=0&amp;showinfo=0&amp;yt:stretch=16:9&amp;autohide=1&amp;color=white&amp;width=500&amp;width=500";
+                        break;
+                    case 'wotk':
+                        source = "https://itch.io/embed-upload/4058575?color=333333";
+                        break;
+                }                
+                document.getElementById('consent-' + id).style = "display: none;";
+                document.getElementById('iframe-' + id).src = source;
+            }
+
+            function checkInput(id) {
+                const checkbox = document.getElementById(id);
+                if (checkbox.checked) {
+                    loadIFrame(id.split('-')[2]);
+                }
+            }
+        </script>
+        <!-- Check if consent checkboxes are checked and hide consent-area -->
+        <script>
+            const checkboxes = document.getElementsByClassName('consent-chk');
+            for (let i = 0; i < checkboxes.length; i++) {
+                const consentDiv = checkboxes[i].parentElement.parentElement;
+                if (checkboxes[i].checked) {
+                    consentDiv.style = "display: none;"
+                } else {
+                    consentDiv.style = "display: flex;"
+                }
+            }
         </script>
         <!-- Open project when parameter was given in searchbar -->
         <script>
