@@ -2853,19 +2853,19 @@
         </div>
         <!-- Overlay Content-Toggle -->
         <script>
-        function showContent(id) {
-            document.getElementById('nav').style.visibility = "hidden";
-            document.body.style.overflow = "hidden";
-            document.getElementById(id).style.opacity = 100;
-            document.getElementById(id).style.visibility = "visible"; 
-          }
-          
-          function hideContent(id) {
-            document.getElementById('nav').style.visibility = "visible";
-            document.body.style.overflow = "visible";
-            document.getElementById(id).style.opacity = 0;
-            document.getElementById(id).style.visibility = "hidden";
-          }
+            function showContent(id) {
+                document.getElementById('nav').style.visibility = "hidden";
+                document.body.style.overflow = "hidden";
+                document.getElementById(id).style.opacity = 100;
+                document.getElementById(id).style.visibility = "visible"; 
+            }
+            
+            function hideContent(id) {
+                document.getElementById('nav').style.visibility = "visible";
+                document.body.style.overflow = "visible";
+                document.getElementById(id).style.opacity = 0;
+                document.getElementById(id).style.visibility = "hidden";
+            }
         </script>
         <!-- Navigation Hide -->
         <script>
@@ -2879,6 +2879,17 @@
             }
             prevScrollpos = currentScrollPos;
             } 
+        </script>
+        <!-- Open project when parameter was given in searchbar -->
+        <script>
+            function openProject(parameterString) {
+                const parameters = new URLSearchParams(parameterString);
+                if (parameters.has('project')) {
+                    const project = parameters.get('project');
+                    showContent(project);
+                }
+            }
+            openProject(window.location.search);
         </script>
     </body>
 </html>
