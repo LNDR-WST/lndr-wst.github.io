@@ -204,6 +204,31 @@ video {
   color: whitesmoke;
 }
 
+#hidden-content a.button {
+  background-color: rgba(0,0,0,0);
+  color: white;
+  font-family: 'Staatliches', cursive;
+  font-size: 1.3em;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-style: solid;
+  border-color: white;
+  margin: 0.8em;
+  box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.3);
+  border-radius: 25px;
+  width: 70%;
+  text-align: center;
+  align-self: center;
+  cursor: pointer;
+  transition: background-color 0.5s, color 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+#hidden-content a.button:hover {
+  background-color: white;
+  color: rgba(22,24,25,1);
+}
+
 #cardwrapper {
   display: flex;
   flex-direction: row;
