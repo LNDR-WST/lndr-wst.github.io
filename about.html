@@ -14,7 +14,7 @@
     <body>
         <div class="navparent" id="nav">
             <div class="navbar">
-                <a href="/"><div id="logosvg"><span id="btn-home">LW</span></div></a>
+                <a href="/"><div id="logosvg"><span class="noselect" id="btn-home">LW</span></div></a>
                 <!-- Burger-Menu -->
                 <div class="nav-burger-container">
                     <input class="inputboxburger" type="checkbox" id="menuToggle"></input>
@@ -23,8 +23,8 @@
                         <label for="menuToggle"></label>
                         <div class="menuContent" id="menu">
                             <ul>
-                                <li><a href="/" onclick="uncheck('menuToggle')">Projekte</a></li>
-                                <li><a href="/about" onclick="uncheck('menuToggle')">About</a></li>
+                                <li><a class="noselect" href="/" onclick="uncheck('menuToggle')">Projekte</a></li>
+                                <li><a class="noselect" href="/about" onclick="uncheck('menuToggle')">About</a></li>
                             </ul>
                         </div>
                     </div>
@@ -83,22 +83,6 @@
             </div>
             <br>
         </div>
-        <!-- Overlay Content-Toggle -->
-        <script>
-        function showContent(id) {
-            document.getElementById('nav').style.visibility = "hidden";
-            document.body.style.overflow = "hidden";
-            document.getElementById(id).style.opacity = 100;
-            document.getElementById(id).style.visibility = "visible"; 
-          }
-          
-          function hideContent(id) {
-            document.getElementById('nav').style.visibility = "visible";
-            document.body.style.overflow = "visible";
-            document.getElementById(id).style.opacity = 0;
-            document.getElementById(id).style.visibility = "hidden";
-          }
-        </script>
         <!-- Navigation Hide -->
         <script>
             let prevScrollpos = window.pageYOffset;

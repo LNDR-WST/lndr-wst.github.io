@@ -260,6 +260,10 @@ video {
   filter: saturate(1);
 }
 
+.card.hidden {
+  display: none;
+}
+
 .card-header {
   border-radius: 10px;
   margin: 0.5em 0.5em 0.1em 0.5em;
@@ -362,6 +366,50 @@ video {
 #card-btn:active {
   box-shadow: inset -2px 2px 5px #a7a7a7,
   inset 2px -2px 5px #d9d9d9;
+}
+
+.filter-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0.7em;
+}
+
+.filter-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #c0c0c0;
+  font-weight: bold;
+  text-transform: uppercase;
+  align-self: end;
+  margin: 0.5em;
+  width: 100px !important;
+  height: 45px !important;
+  color: rgb(105, 105, 105) !important;
+  box-shadow: -1px 2px 5px rgba(0,0,0,0.5), 1px -2px 5px rgba(255,255,255,0.8) !important;
+  font-size: 10px !important;
+}
+
+.filter-btn:hover {
+  color: whitesmoke !important;
+  box-shadow: inset -5px 5px 6px #a7a7a7, inset 5px -5px 6px #d9d9d9 !important;
+}
+
+.filter-btn.active {
+  color: darkcyan !important;
+  /* background-color: #228dff !important; */
+  box-shadow: inset -5px 5px 6px #a7a7a7, inset 5px -5px 6px #d9d9d9 !important;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 }
 
 /* Keyframes for Neon-Effect */

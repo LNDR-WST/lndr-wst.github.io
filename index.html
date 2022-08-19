@@ -14,7 +14,7 @@
     <body>
         <div class="navparent" id="nav">
             <div class="navbar">
-                <a href="/"><div id="logosvg"><span id="btn-home">LW</span></div></a>
+                <a href="/"><div id="logosvg"><span class="noselect" id="btn-home">LW</span></div></a>
                 <!-- Burger-Menu -->
                 <div class="nav-burger-container">
                     <input class="inputboxburger" type="checkbox" id="menuToggle"></input>
@@ -23,8 +23,8 @@
                         <label for="menuToggle"></label>
                         <div class="menuContent" id="menu">
                             <ul>
-                                <li><a href="/" onclick="uncheck('menuToggle')">Projekte</a></li>
-                                <li><a href="/about" onclick="uncheck('menuToggle')">About</a></li>
+                                <li><a class="noselect" href="/" onclick="uncheck('menuToggle')">Projekte</a></li>
+                                <li><a class="noselect" href="/about" onclick="uncheck('menuToggle')">About</a></li>
                             </ul>
                         </div>
                     </div>
@@ -38,6 +38,15 @@
             </div>
             <div id="section">
                 <h2>Übersicht</h1>
+                <div class="filter-btn-wrapper" id="filter-btn-wrapper">
+                    <div class="filter-btn noselect active" id="filter-btn-all" onclick="filterClick(this.id)">All</div>
+                    <div class="filter-btn noselect" id="filter-btn-software" onclick="filterClick(this.id)">Software</div>
+                    <div class="filter-btn noselect" id="filter-btn-web" onclick="filterClick(this.id)">Web</div>
+                    <div class="filter-btn noselect" id="filter-btn-mobile" onclick="filterClick(this.id)">Mobile</div>
+                    <div class="filter-btn noselect" id="filter-btn-games" onclick="filterClick(this.id)">Games</div>
+                    <div class="filter-btn noselect" id="filter-btn-graphics" onclick="filterClick(this.id)">Graphics</div>
+                    <div class="filter-btn noselect" id="filter-btn-datascience" onclick="filterClick(this.id)">Data Science</div>
+                </div>
                 <div id="cardwrapper">
                     <div class="card games">
                         <div class="card-header">
@@ -45,12 +54,12 @@
                         </div>
                         <div class="card-content">
                             <div id="card-tag-wrapper">
-                                <div id="card-tag">Games</div>
+                                <div class="noselect" id="card-tag">Games</div>
                             </div>
                             <p id="card-headline">Finding a Home</p>
                             <p id="card-info">Prototyp eines Point & Click Adventures mit <span style="font-style: italic;">Adventure Studio</span></p>
                         </div>                        
-                        <div id="card-btn" onclick="showContent('fah')"><a>Details</a></div>
+                        <div id="card-btn" onclick="showContent('fah')"><a class="noselect">Details</a></div>
                     </div>
                     <div class="card games">
                         <div class="card-header">
@@ -58,12 +67,12 @@
                         </div>
                         <div class="card-content">
                             <div id="card-tag-wrapper">
-                                <div id="card-tag">Games</div>
+                                <div class="noselect" id="card-tag">Games</div>
                             </div>
                             <p id="card-headline">Wrath of Tiny Knight</p>
                             <p id="card-info">Prototyp eines 2D-Pixel-Art-Sidescrollers mit <span style="font-style: italic;">Unity</span></p>
                         </div>                        
-                        <div id="card-btn" onclick="showContent('wotk')"><a>Details</a></div>
+                        <div id="card-btn" onclick="showContent('wotk')"><a class="noselect">Details</a></div>
                     </div>
                     <div class="card graphics">
                         <div class="card-header">
@@ -71,12 +80,12 @@
                         </div>
                         <div class="card-content">
                             <div id="card-tag-wrapper">
-                                <div id="card-tag">Graphics</div>
+                                <div class="noselect" id="card-tag">Graphics</div>
                             </div>
                             <p id="card-headline">3D-Modeling: Canon AE-1</p>
                             <p id="card-info">3D Modellierung einer Kamera mit <span style="font-style: italic;">Blender</span></p>
                         </div>                        
-                        <div id="card-btn" onclick="showContent('blender')"><a>Details</a></div>
+                        <div id="card-btn" onclick="showContent('blender')"><a class="noselect">Details</a></div>
                     </div>
                     <div class="card graphics web">
                         <div class="card-header">
@@ -84,26 +93,27 @@
                         </div>
                         <div class="card-content">
                             <div id="card-tag-wrapper">
-                                <div id="card-tag">Graphics</div>
-                                <div id="card-tag">Web</div>
+                                <div class="noselect" id="card-tag">Graphics</div>
+                                <div class="noselect" id="card-tag">Web</div>
                             </div>
                             <p id="card-headline">WebGL Turntables</p>
                             <p id="card-info">Nachbau eines Plattenspielers für eine Echtzeit-3D-Anwendung mit <span style="font-style: italic;">Three.JS</span></p>
                         </div>                        
-                        <div id="card-btn" onclick="showContent('three')"><a>Details</a></div>
+                        <div id="card-btn" onclick="showContent('three')"><a class="noselect">Details</a></div>
                     </div>
-                    <div class="card software">
+                    <div class="card software mobile">
                         <div class="card-header">
                             <img src="./img/projects/mischifischi_screen.jpg">
                         </div>
                         <div class="card-content">
                             <div id="card-tag-wrapper">
-                                <div id="card-tag">Software</div>
+                                <div class="noselect" id="card-tag">Mobile</div>
+                                <div class="noselect" id="card-tag">Software</div>
                             </div>
                             <p id="card-headline">MischiFischi App</p>
                             <p id="card-info">Mit <i>React Native</i> entwickelte App zum Erstellen eigener Fisch-Grafiken</p>
                         </div>                        
-                        <div id="card-btn" onclick="showContent('mischifischi')"><a>Details</a></div>
+                        <div id="card-btn" onclick="showContent('mischifischi')"><a class="noselect">Details</a></div>
                     </div>
                     <div class="card software">
                         <div class="card-header">
@@ -111,12 +121,12 @@
                         </div>
                         <div class="card-content">
                             <div id="card-tag-wrapper">
-                                <div id="card-tag">Software</div>
+                                <div class="noselect" id="card-tag">Software</div>
                             </div>
                             <p id="card-headline">Timetracker</p>
                             <p id="card-info">In <span style="font-style: italic;">Java</span> geschriebene Software zur projektbasierten Zeiterfassung (Prototyp)</p>
                         </div>                        
-                        <div id="card-btn" onclick="showContent('timetracker')"><a>Details</a></div>
+                        <div id="card-btn" onclick="showContent('timetracker')"><a class="noselect">Details</a></div>
                     </div>
                     <div class="card web">
                         <div class="card-header">
@@ -124,25 +134,25 @@
                         </div>
                         <div class="card-content">
                             <div id="card-tag-wrapper">
-                                <div id="card-tag">Web</div>
+                                <div class="noselect" id="card-tag">Web</div>
                             </div>
                             <p id="card-headline">Codex Code-Plattform</p>
                             <p id="card-info">Mit Node.js entwickelte Web-Plattform zum Austausch von Code-Snippets</p>
                         </div>                        
-                        <div id="card-btn" onclick="showContent('codex')"><a>Details</a></div>
+                        <div id="card-btn" onclick="showContent('codex')"><a class="noselect">Details</a></div>
                     </div>
-                    <div class="card data-science">
+                    <div class="card datascience">
                         <div class="card-header">
                             <img src="./img/projects/dmc_screen.jpg">
                         </div>
                         <div class="card-content">
                             <div id="card-tag-wrapper">
-                                <div id="card-tag">Data Science</div>
+                                <div class="noselect" id="card-tag">Data Science</div>
                             </div>
                             <p id="card-headline">Data Mining Cup 2022<br>(Platz 16)</p>
                             <p id="card-info">Kaufvorhersage auf Grundlage einer Bestellhistorie</p>
                         </div>                        
-                        <div id="card-btn" onclick="showContent('dmc22')"><a>Details</a></div>
+                        <div id="card-btn" onclick="showContent('dmc22')"><a class="noselect">Details</a></div>
                     </div>
                     
                     <i aria-hidden="true"></i>
@@ -2948,6 +2958,73 @@
                 }
             }
             openProject(window.location.search);
+        </script>
+        <!-- Card filter functions-->
+        <script>
+            let filterList = [];
+            const btnAll = document.getElementById('filter-btn-all');
+            const btnList = document.getElementById('filter-btn-wrapper').children;
+            function filterClick(id) {
+                const btn = document.getElementById(id)
+                const tagName = id.split('-')[2];
+                if (btn.id !== 'filter-btn-all') {
+                    btn.classList.toggle('active');
+                    if (btn.classList.contains('active')) {
+                        addFilter(tagName);
+                    } else {
+                        removeFilter(tagName);
+                    }
+                } else if (btn.id === 'filter-btn-all' && !btn.classList.contains('active')) {
+                    resetFilter();
+                }
+                filterCards();
+            }
+            function addFilter(tag){
+                filterList.push(tag);
+                if (btnAll.classList.contains('active')) {
+                    btnAll.classList.remove('active');
+                }
+                if (filterList.length >= 6) {
+                    resetFilter();
+                }
+            }
+            function removeFilter(tag) {
+                filterList = filterList.filter(element => element != tag);
+                if (filterList.length == 0) {
+                    btnAll.classList.add('active');
+                }
+            }
+            function resetFilter() {
+                for (i = 0; i < btnList.length; i++) {
+                        btnList[i].classList.remove('active');
+                }
+                btnAll.classList.add('active');
+                filterList = [];
+            }
+
+            function filterCards() {
+                const cards = document.getElementById('cardwrapper').children;
+                if (filterList.length == 0) {
+                    for (i = 0; i < cards.length; i++) {
+                        if (cards[i].classList.contains('hidden')) {
+                            cards[i].classList.remove('hidden');
+                        }
+                    }
+                } else {
+                    for (i = 0; i < cards.length; i++) {
+                        cards[i].classList.add('hidden');
+                    }
+                    for (i = 0; i < cards.length; i++) {
+                        let classNames = cards[i].className.split(' ');
+                        for (const name of classNames) {
+                            if (filterList.includes(name)) {
+                                cards[i].classList.remove('hidden');
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
         </script>
     </body>
 </html>
