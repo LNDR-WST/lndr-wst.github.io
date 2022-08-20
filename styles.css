@@ -224,11 +224,6 @@ video {
   transition-timing-function: ease-in-out;
 }
 
-#hidden-content a.button:hover {
-  background-color: white;
-  color: rgba(22,24,25,1);
-}
-
 #cardwrapper {
   display: flex;
   flex-direction: row;
@@ -254,10 +249,6 @@ video {
   margin: 2em 1em;
   filter: saturate(0.5);
   transition: all 0.5s ease-in-out 0s;
-}
-
-.card:hover {
-  filter: saturate(1);
 }
 
 .card.hidden {
@@ -355,14 +346,6 @@ video {
   transition: all .2s ease-in-out;
 }
 
-#card-btn > a:hover{
-  color: whitesmoke;
-}
-
-#card-btn:hover {
-  /* box-shadow: -1px 2px 5px rgba(0,0,0,0.3), 1px -2px 5px rgba(255,255,255,0.5); */
-}
-
 #card-btn:active {
   box-shadow: inset -2px 2px 5px #a7a7a7,
   inset 2px -2px 5px #d9d9d9;
@@ -390,11 +373,6 @@ video {
   color: rgb(105, 105, 105) !important;
   box-shadow: -1px 2px 5px rgba(0,0,0,0.5), 1px -2px 5px rgba(255,255,255,0.8) !important;
   font-size: 10px !important;
-}
-
-.filter-btn:hover {
-  color: whitesmoke !important;
-  box-shadow: inset -5px 5px 6px #a7a7a7, inset 5px -5px 6px #d9d9d9 !important;
 }
 
 .filter-btn.active {
@@ -680,10 +658,6 @@ a {
     text-decoration: none;
 }
 
-a:hover {
-  color:whitesmoke;
-}
-
 a:visited {
   color: white;
 }
@@ -742,11 +716,6 @@ img {
   transition-timing-function: ease-in-out;
 }
 
-  .button:hover {
-    background-color: white;
-    color: rgba(22,24,25,1);
-  }
-
 .link-btn-box {
   display: flex;
   justify-content: flex-start;
@@ -774,10 +743,6 @@ img {
   margin-bottom: -1.5em;
   font-size: 0.6em;
   color: grey;
-}
-
-.btn-link:hover {
-  filter: invert();
 }
 
 .btn-github {
@@ -1059,5 +1024,44 @@ img {
 @media (min-width: 2560px) {
   .wrapper {
     max-width: 1920px;
+  }
+}
+
+/* Only use Hover on Non-Touch Devices */
+/* All Hover-Effects here! */
+@media (hover: hover) and (pointer: fine) {
+  a:hover {
+    color:whitesmoke;
+  }
+  
+  #hidden-content a.button:hover {
+    background-color: white;
+    color: rgba(22,24,25,1);
+  }
+  
+  .card:hover {
+    filter: saturate(1);
+  }
+  
+  #card-btn > a:hover{
+    color: whitesmoke;
+  }
+  
+  #card-btn:hover {
+    /* box-shadow: -1px 2px 5px rgba(0,0,0,0.3), 1px -2px 5px rgba(255,255,255,0.5); */
+  }
+  
+  .filter-btn:hover {
+    color: whitesmoke !important;
+    box-shadow: inset -5px 5px 6px #a7a7a7, inset 5px -5px 6px #d9d9d9 !important;
+  }
+  
+  .button:hover {
+    background-color: white;
+    color: rgba(22,24,25,1);
+  }
+  
+  .btn-link:hover {
+    filter: invert();
   }
 }
