@@ -351,6 +351,66 @@ video {
   inset 2px -2px 5px #d9d9d9;
 }
 
+details[open] > div {
+  animation-name: slideDown;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+}
+
+details[open] > div > .filter-btn {
+  opacity: 0;
+  animation-name: showContent;
+  animation-duration: 0.6s;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+summary {
+  display: block;
+  cursor: pointer;
+  color: #c0c0c0;
+  font-weight: bold;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  text-shadow: -0.025em 0.025em 0.056em rgba(0,0,0,0.5), 0.025em -0.025em 0.056em rgba(255,255,255,0.8);
+  transition: all 0.5s ease-in-out 0s;
+  transition: .3s;
+  user-select: none;
+  margin: 0.5em;
+}
+
+summary::before {
+  content: "+ ";
+}
+
+details[open] > summary::before {
+  content :"− "
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    height: 0;
+    padding: 0;
+  }
+
+  to {
+    opacity: 1;
+    height: var(--contentHeight);
+    padding: 20px;
+  }
+}
+
+@keyframes showContent {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .filter-btn-wrapper {
   display: flex;
   justify-content: center;

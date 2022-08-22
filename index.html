@@ -6,7 +6,7 @@
         <link href="navbar.css" rel="stylesheet">
         <!-- Javascript -->
         <!-- <script src="bodymovin/lottie-player.js"></script> -->
-        <script  src="https://code.jquery.com/jquery-3.5.1.min.js"  crossorigin="anonymous"></script>
+        <script  src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
         <!-- Meta -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Leander Wernst | Projekte</title>
@@ -38,15 +38,18 @@
             </div>
             <div id="section">
                 <h2>Übersicht</h1>
-                <div class="filter-btn-wrapper" id="filter-btn-wrapper">
-                    <div class="filter-btn noselect active" id="filter-btn-all" onclick="filterClick(this.id)">All</div>
-                    <div class="filter-btn noselect" id="filter-btn-software" onclick="filterClick(this.id)">Software</div>
-                    <div class="filter-btn noselect" id="filter-btn-web" onclick="filterClick(this.id)">Web</div>
-                    <div class="filter-btn noselect" id="filter-btn-mobile" onclick="filterClick(this.id)">Mobile</div>
-                    <div class="filter-btn noselect" id="filter-btn-games" onclick="filterClick(this.id)">Games</div>
-                    <div class="filter-btn noselect" id="filter-btn-graphics" onclick="filterClick(this.id)">Graphics</div>
-                    <div class="filter-btn noselect" id="filter-btn-datascience" onclick="filterClick(this.id)">Data Science</div>
-                </div>
+                <details>
+                    <summary>Filter</summary> 
+                    <div class="filter-btn-wrapper" id="filter-btn-wrapper">
+                        <div class="filter-btn noselect active" id="filter-btn-all" onclick="filterClick(this.id)">All</div>
+                        <div class="filter-btn noselect" id="filter-btn-software" onclick="filterClick(this.id)">Software</div>
+                        <div class="filter-btn noselect" id="filter-btn-web" onclick="filterClick(this.id)">Web</div>
+                        <div class="filter-btn noselect" id="filter-btn-mobile" onclick="filterClick(this.id)">Mobile</div>
+                        <div class="filter-btn noselect" id="filter-btn-games" onclick="filterClick(this.id)">Games</div>
+                        <div class="filter-btn noselect" id="filter-btn-graphics" onclick="filterClick(this.id)">Graphics</div>
+                        <div class="filter-btn noselect" id="filter-btn-datascience" onclick="filterClick(this.id)">Data Science</div>
+                    </div>
+                </details>
                 <div id="cardwrapper">
                     <div class="card games">
                         <div class="card-header">
@@ -290,12 +293,6 @@
                                 Am Ende kam ein spielbarer Prototyp heraus, der zwar nicht gänzlich fehlerfrei ist, aber insgesamt schon ein gutes 
                                 Spielgefühl vermittelt und Spielidee, Mechanics, den Core Gameplay Loop sowie die Game Design Pillars transportiert.
                             </p>
-                            <script>
-                                function showIframe() {
-                                    document.getElementById('iframe-container').style.setProperty('display', 'block')
-                                }
-                            </script>
-                            <!-- <a class="button" style="margin: 4em 2em;" href="https://itch.io/embed-upload/4058575?color=333333" target="wotk-iframe" onclick="showIframe()">Play Game!</a> -->
                             <div class="iframe-container" style="background: center / contain no-repeat url('./img/projects/wotk_game-thumb.jpg');">
                                 <div class="consent" id="consent-wotk">
                                     <p>
@@ -2884,147 +2881,6 @@
             </div>
             <br>
         </div>
-        <!-- Overlay Content-Toggle -->
-        <script>
-            function showContent(id) {
-                document.getElementById('nav').style.visibility = "hidden";
-                document.body.style.overflow = "hidden";
-                document.getElementById(id).style.opacity = 100;
-                document.getElementById(id).style.visibility = "visible"; 
-            }
-            
-            function hideContent(id) {
-                document.getElementById('nav').style.visibility = "visible";
-                document.body.style.overflow = "visible";
-                document.getElementById(id).style.opacity = 0;
-                document.getElementById(id).style.visibility = "hidden";
-            }
-        </script>
-        <!-- Navigation Hide -->
-        <script>
-            let prevScrollpos = window.pageYOffset;
-            window.onscroll = function() {
-            let currentScrollPos = window.pageYOffset;
-            if (prevScrollpos > currentScrollPos) {
-                document.getElementById("nav").style.top = "0";
-            } else if (prevScrollpos < currentScrollPos && prevScrollpos >= 0) {
-                document.getElementById("nav").style.top = "-57px";
-            }
-            prevScrollpos = currentScrollPos;
-            } 
-        </script>
-        <!-- (De)Activate iFrame on checkbox change -->
-        <script>
-            function loadIFrame(id) {
-                let source;
-                switch(id) {
-                    case 'fah':
-                        source = "https://www.youtube.com/embed/OtM3HaeACZM?ecver=1&amp;iv_load_policy=3&amp;rel=0&amp;showinfo=0&amp;yt:stretch=16:9&amp;autohide=1&amp;color=white&amp;width=500&amp;width=500";
-                        break;
-                    case 'wotk':
-                        source = "https://itch.io/embed-upload/4058575?color=333333";
-                        break;
-                }                
-                document.getElementById('consent-' + id).style = "display: none;";
-                document.getElementById('iframe-' + id).src = source;
-            }
-
-            function checkInput(id) {
-                const checkbox = document.getElementById(id);
-                if (checkbox.checked) {
-                    loadIFrame(id.split('-')[2]);
-                }
-            }
-        </script>
-        <!-- Check if consent checkboxes are checked and hide consent-area -->
-        <script>
-            const checkboxes = document.getElementsByClassName('consent-chk');
-            for (let i = 0; i < checkboxes.length; i++) {
-                const consentDiv = checkboxes[i].parentElement.parentElement;
-                if (checkboxes[i].checked) {
-                    consentDiv.style = "display: none;"
-                } else {
-                    consentDiv.style = "display: flex;"
-                }
-            }
-        </script>
-        <!-- Open project when parameter was given in searchbar -->
-        <script>
-            function openProject(parameterString) {
-                const parameters = new URLSearchParams(parameterString);
-                if (parameters.has('project')) {
-                    const project = parameters.get('project');
-                    showContent(project);
-                }
-            }
-            openProject(window.location.search);
-        </script>
-        <!-- Card filter functions-->
-        <script>
-            let filterList = [];
-            const btnAll = document.getElementById('filter-btn-all');
-            const btnList = document.getElementById('filter-btn-wrapper').children;
-            function filterClick(id) {
-                const btn = document.getElementById(id)
-                const tagName = id.split('-')[2];
-                if (btn.id !== 'filter-btn-all') {
-                    btn.classList.toggle('active');
-                    if (btn.classList.contains('active')) {
-                        addFilter(tagName);
-                    } else {
-                        removeFilter(tagName);
-                    }
-                } else if (btn.id === 'filter-btn-all' && !btn.classList.contains('active')) {
-                    resetFilter();
-                }
-                filterCards();
-            }
-            function addFilter(tag){
-                filterList.push(tag);
-                if (btnAll.classList.contains('active')) {
-                    btnAll.classList.remove('active');
-                }
-                if (filterList.length >= 6) {
-                    resetFilter();
-                }
-            }
-            function removeFilter(tag) {
-                filterList = filterList.filter(element => element != tag);
-                if (filterList.length == 0) {
-                    btnAll.classList.add('active');
-                }
-            }
-            function resetFilter() {
-                for (i = 0; i < btnList.length; i++) {
-                        btnList[i].classList.remove('active');
-                }
-                btnAll.classList.add('active');
-                filterList = [];
-            }
-
-            function filterCards() {
-                const cards = document.getElementById('cardwrapper').children;
-                if (filterList.length == 0) {
-                    for (i = 0; i < cards.length; i++) {
-                        if (cards[i].classList.contains('hidden')) {
-                            cards[i].classList.remove('hidden');
-                        }
-                    }
-                } else {
-                    for (i = 0; i < cards.length; i++) {
-                        cards[i].classList.add('hidden');
-                    }
-                    for (i = 0; i < cards.length; i++) {
-                        let classNames = cards[i].className.split(' ');
-                        for (const name of classNames) {
-                            if (filterList.includes(name)) {
-                                cards[i].classList.remove('hidden');
-                                break;
-                            }
-                        }
-                    }
-                }
-            }
-        </script>
+        <script src="./js/scripts.js"></script>
     </body>
 </html>
