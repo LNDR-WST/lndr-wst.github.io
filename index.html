@@ -37,7 +37,7 @@
                 <h3>Eine<br>Projekt-<br>sammlung</h2>
             </div>
             <div id="section">
-                <h2>Übersicht</h1>
+                <h2 id="overview">Übersicht</h1>
                 <details>
                     <summary>Filter</summary> 
                     <div class="filter-btn-wrapper" id="filter-btn-wrapper">
@@ -53,7 +53,7 @@
                 <div id="cardwrapper">
                     <div class="card games">
                         <div class="card-header">
-                            <img src="./img/projects/fah_screen.jpg">
+                            <img src="./img/projects/fah/fah_screen.jpg">
                         </div>
                         <div class="card-content">
                             <div id="card-tag-wrapper">
@@ -66,7 +66,7 @@
                     </div>
                     <div class="card games">
                         <div class="card-header">
-                            <img src="./img/projects/wotk_screen.jpg">
+                            <img src="./img/projects/wotk/wotk_screen.jpg">
                         </div>
                         <div class="card-content">
                             <div id="card-tag-wrapper">
@@ -79,7 +79,7 @@
                     </div>
                     <div class="card graphics">
                         <div class="card-header">
-                            <img src="./img/projects/blender_screen.jpg">
+                            <img src="./img/projects/blender/blender_screen.jpg">
                         </div>
                         <div class="card-content">
                             <div id="card-tag-wrapper">
@@ -92,7 +92,7 @@
                     </div>
                     <div class="card graphics web">
                         <div class="card-header">
-                            <img src="./img/projects/three_screen.jpg">
+                            <img src="./img/projects/three/three_screen.jpg">
                         </div>
                         <div class="card-content">
                             <div id="card-tag-wrapper">
@@ -106,7 +106,7 @@
                     </div>
                     <div class="card software mobile">
                         <div class="card-header">
-                            <img src="./img/projects/mischifischi_screen.jpg">
+                            <img src="./img/projects/mischifischi/mischifischi_screen.jpg">
                         </div>
                         <div class="card-content">
                             <div id="card-tag-wrapper">
@@ -114,13 +114,13 @@
                                 <div class="noselect" id="card-tag">Software</div>
                             </div>
                             <p id="card-headline">MischiFischi App</p>
-                            <p id="card-info">Mit <i>React Native</i> entwickelte App zum Erstellen eigener Fisch-Grafiken</p>
+                            <p id="card-info">Mit <i>React Native</i> entwickelte App zum Erstellen von Fisch-Grafiken</p>
                         </div>                        
                         <div id="card-btn" onclick="showContent('mischifischi')"><a class="noselect">Details</a></div>
                     </div>
                     <div class="card software">
                         <div class="card-header">
-                            <img src="./img/projects/timetracker_screen.jpg">
+                            <img src="./img/projects/timetracker/timetracker_screen.jpg">
                         </div>
                         <div class="card-content">
                             <div id="card-tag-wrapper">
@@ -133,7 +133,7 @@
                     </div>
                     <div class="card web">
                         <div class="card-header">
-                            <img src="./img/projects/codex_screen.jpg">
+                            <img src="./img/projects/codex/codex_screen.jpg">
                         </div>
                         <div class="card-content">
                             <div id="card-tag-wrapper">
@@ -146,7 +146,7 @@
                     </div>
                     <div class="card datascience">
                         <div class="card-header">
-                            <img src="./img/projects/dmc_screen.jpg">
+                            <img src="./img/projects/dmc/dmc_screen.jpg">
                         </div>
                         <div class="card-content">
                             <div id="card-tag-wrapper">
@@ -157,6 +157,19 @@
                         </div>                        
                         <div id="card-btn" onclick="showContent('dmc22')"><a class="noselect">Details</a></div>
                     </div>
+                    <div class="card web">
+                        <div class="card-header">
+                            <img src="./img/projects/afm/afm_screen.jpg">
+                        </div>
+                        <div class="card-content">
+                            <div id="card-tag-wrapper">
+                                <div class="noselect" id="card-tag">Web</div>
+                            </div>
+                            <p id="card-headline">Automatic Foley Machine</p>
+                            <p id="card-info">Automatische Video-Vertonung durch Objekterkennung und Nutzung der Web Audio API</p>
+                        </div>                        
+                        <div id="card-btn" onclick="showContent('avprg-afm')"><a class="noselect">Details</a></div>
+                    </div>
                     
                     <i aria-hidden="true"></i>
                     <i aria-hidden="true"></i>
@@ -165,8 +178,8 @@
                 </div>
                 <!-- HIDDEN OVERLAYS -->
                 <div class="wrapper wrapper-disabled" id="hidden-content">
-                    <div class="overlay-content" id="fah" >
-                        <div>
+                    <div class="overlay-content" id="fah" onclick="hideContent('fah')">
+                        <div onclick="event.stopPropagation()">
                             <a class="close" onclick="hideContent('fah')"></a>
                             <h3 class="overlay-hl" id="games">Finding a Home (2021)</h3>
                             <table>
@@ -195,7 +208,7 @@
                                     <td>Soe Ö., Dana H., Mursal D.</td>
                                 </tr>
                             </table>
-                            <img src="./img/projects/fah_main.jpg">
+                            <img src="./img/projects/fah/fah_main.jpg">
                             <a class="attribution" href='https://www.anthonyboyd.graphics/mockups/retro-ibm-desktop-mockup/'>Retro IBM Desktop Mockup by Anthony Boyd Graphics</a>
                             <div class="link-btn-box">
                                 <a href="https://github.com/leanderwernst/finding-a-home" target="_blank" class="btn-link btn-github"></a>
@@ -211,7 +224,7 @@
                                 Umsetzung des Vorhabens.
                             </p>
                             <h4>Ergebnis</h4>
-                            <img src="./img/projects/fah_level.png" style="max-width: 980px">
+                            <img src="./img/projects/fah/fah_level.png" style="max-width: 980px">
                             <a class="button" href="./resources/fah-web/index.html" target="_blank">Play&nbsp;Me!</a>
                             <p>
                                 Das Produkt des Kurses ist Finding a Home: Der Prototyp zu einem Point-and-Click-Adventure in 
@@ -221,7 +234,7 @@
                                 Zur Realisierung des Prototyps wurden diverse frei erhältliche Game-Assets und Sounds verwendet.
                             </p>
 
-                            <div class="iframe-container" style="background: center / contain no-repeat url('./img/projects/fah_yt-thumb.jpg');">
+                            <div class="iframe-container" style="background: center / contain no-repeat url('./img/projects/fah/fah_yt-thumb.jpg');">
                                 <div class="consent" id="consent-fah">
                                     <p>
                                         <b style="color: red;">Externer Inhalt von YouTube</b><br>
@@ -239,8 +252,8 @@
                     </div>    
                 </div>
                 <div class="wrapper wrapper-disabled" id="hidden-content">
-                    <div class="overlay-content" id="wotk" >
-                        <div>
+                    <div class="overlay-content" id="wotk" onclick="hideContent('wotk')">
+                        <div onclick="event.stopPropagation()">
                             <a class="close" onclick="hideContent('wotk')"></a>
                             <h3 class="overlay-hl" id="games">Wrath of Tiny Knight (2021)</h3>
                             <table>
@@ -273,7 +286,7 @@
                                 <a href="https://github.com/SirMightyMo/ProjectTBA" target="_blank" class="btn-link btn-github"></a>
                                 <a href="https://mightymo.itch.io/tinyknight" target="_blank" class="btn-link btn-demo"></a>
                             </div>
-                            <img src="./img/projects/wotk_main.jpg">
+                            <img src="./img/projects/wotk/wotk_main.jpg">
                             <h4>Aufgabe</h4>
                             <p>
                                 Die Spieleprojekte aus dem vorherigen Kurs sollten in Media/Game Design 3 deutlich weiterentwickelt 
@@ -293,7 +306,7 @@
                                 Am Ende kam ein spielbarer Prototyp heraus, der zwar nicht gänzlich fehlerfrei ist, aber insgesamt schon ein gutes 
                                 Spielgefühl vermittelt und Spielidee, Mechanics, den Core Gameplay Loop sowie die Game Design Pillars transportiert.
                             </p>
-                            <div class="iframe-container" style="background: center / contain no-repeat url('./img/projects/wotk_game-thumb.jpg');">
+                            <div class="iframe-container" style="background: center / contain no-repeat url('./img/projects/wotk/wotk_game-thumb.jpg');">
                                 <div class="consent" id="consent-wotk">
                                     <p>
                                         <b style="color: red;">Externer Inhalt von itch.io</b><br>
@@ -366,9 +379,9 @@
                                     der Fokus liegt, führt die Spielenden durch ein Karussell der Emotionen aus Spannung, Frust und Euphorie.
                                 </span>
                             </p>
-                            <img src="./img/projects/wotk_pillars.jpg">
+                            <img src="./img/projects/wotk/wotk_pillars.jpg">
                             <h5>Inspiration & Referenzen</h5>
-                            <img src="./img/projects/wotk_inspiration.png" style="max-width: 500px">
+                            <img src="./img/projects/wotk/wotk_inspiration.png" style="max-width: 500px">
                             <ul>
                                 <li>Dead Cells</li>
                                 <li>Foregone</li>
@@ -386,7 +399,7 @@
                                 unterstützen beim Bezwingen der sich in den Weg stellenden Hindernisse.
                             </p>
                             <span style="font-weight:bold;">Mechanics</span><br>
-                            <img src="./img/projects/wotk_loop.png" style="max-width: 500px">
+                            <img src="./img/projects/wotk/wotk_loop.png" style="max-width: 500px">
                             <ul>
                                 <li>Steuerung des Characters mit Controller oder Maus & Keyboard durchs Level ohne Zeitlimit</li>
                                 <li>Hindernisse müssen bekämpft, überwunden oder umgangen werden</li>
@@ -439,8 +452,8 @@
                     </div>    
                 </div>
                 <div class="wrapper wrapper-disabled" id="hidden-content">
-                    <div class="overlay-content" id="blender" >
-                        <div>
+                    <div class="overlay-content" id="blender" onclick="hideContent('blender')">
+                        <div onclick="event.stopPropagation()">
                             <a class="close" onclick="hideContent('blender')"></a>
                             <h3 class="overlay-hl" id="graphics">3D-Modeling:<br>Canon AE-1 (2022)</h3>
                             <table>
@@ -461,7 +474,7 @@
                                     <td>Blender (2.93.6)</td>
                                 </tr>
                             </table>
-                            <img src="./img/projects/blender_main.jpg">
+                            <img src="./img/projects/blender/blender_main.jpg">
                             <a class="attribution" href='https://www.freepik.com/psd/mockup'>Mockup psd created by xvector - www.freepik.com</a>
                             <h4>Aufgabe</h4>
                             <p>
@@ -472,9 +485,9 @@
                             </p>
                             <h5>Vorlage</h5>
                             <p>Als Vorlage diente eine Canon AE-1 Program Spiegelreflexkamera, die zunächst von allen Seiten abfotografiert wurde.</p>
-                            <img src="./img/projects/blender_vorlage.jpg">
+                            <img src="./img/projects/blender/blender_vorlage.jpg">
                             <h4>Ergebnis</h4>
-                            <video src="./img/projects/blender_video_small.mp4" poster="./img/projects/blender_poster.png" controls loop></video>
+                            <video src="./img/projects/blender/blender_video_small.mp4" poster="./img/projects/blender/blender_poster.png" controls loop></video>
                             <a class="attribution" href='https://incompetech.filmmusic.io/song/4534-too-cool' style="align-self: center;">Soundtrack 'Too Cool' by Kevin MacLeod</a>
                             <p>
                                 Herausgekommen ist ein High-Poly-Model aus 81 Objekten mit insgesamt ~5.95 Mio. Faces (5&#8239;555&#8239;526&nbsp;
@@ -508,8 +521,8 @@
                     </div>    
                 </div>
                 <div class="wrapper wrapper-disabled" id="hidden-content">
-                    <div class="overlay-content" id="three" >
-                        <div>
+                    <div class="overlay-content" id="three" onclick="hideContent('three')">
+                        <div onclick="event.stopPropagation()">
                             <a class="close" onclick="hideContent('three')"></a>
                             <h3 class="overlay-hl" id="graphics">Turntables (2022)</h3>
                             <table>
@@ -530,7 +543,7 @@
                                     <td>JavaScript (Three.js), HTML</td>
                                 </tr>
                             </table>
-                            <img src="./img/projects/three_main.jpg">
+                            <img src="./img/projects/three/three_main.jpg">
                             <div class="link-btn-box">
                                 <a href="https://github.com/leanderwernst/hawCGA-threeJS/" target="_blank" class="btn-link btn-github"></a>
                                 <a href="https://leanderwernst.github.io/threeTurntable/" target="_blank" class="btn-link btn-demo"></a>
@@ -673,8 +686,8 @@
                     </div>    
                 </div>
                 <div class="wrapper wrapper-disabled" id="hidden-content">
-                    <div class="overlay-content" id="mischifischi" >
-                        <div>
+                    <div class="overlay-content" id="mischifischi" onclick="hideContent('mischifischi')">
+                        <div onclick="event.stopPropagation()">
                             <a class="close" onclick="hideContent('mischifischi')"></a>
                             <h3 class="overlay-hl" id="software">MischiFischi (2022)</h3>
                             <table>
@@ -699,7 +712,7 @@
                                     <td>Anastasia E., Moritz U.</td>
                                 </tr>
                             </table>
-                            <img src="./img/projects/mischifischi_main.jpg">
+                            <img src="./img/projects/mischifischi/mischifischi_main.jpg">
                             <a class="attribution" href="https://de.freepik.com/psd/mobile-app">Mobile app PSD erstellt von rezaazmy - de.freepik.com</a>
                             <div class="link-btn-box">
                                 <a href="https://github.com/LeanderWernst/MischiFischi" class="btn-link btn-github"></a>
@@ -731,7 +744,7 @@
                                 das Projekt an sich mit Scrum (Vorgehensmodell) geplant und bearbeitet werden.
                             </p>
                             <h4>Ergebnis</h4>
-                            <img src="./img/projects/mischifischi_projection.jpg">
+                            <img src="./img/projects/mischifischi/mischifischi_projection.jpg">
                             <a class="attribution" href='https://de.freepik.com/psd/mockup'>Mockup PSD erstellt von rawpixel.com - de.freepik.com</a>
                             <p>
                                 In drei je dreiwöchigen Sprints ist eine App für iOS und Android entstanden, die (aufgrund der strengen Restriktionen seitens der 
@@ -761,8 +774,8 @@
                     </div>    
                 </div>
                 <div class="wrapper wrapper-disabled" id="hidden-content">
-                    <div class="overlay-content" id="timetracker" >
-                        <div>
+                    <div class="overlay-content" id="timetracker" onclick="hideContent('timetracker')">
+                        <div onclick="event.stopPropagation()">
                             <a class="close" onclick="hideContent('timetracker')"></a>
                             <h3 class="overlay-hl" id="software">Timetracker (2022)</h3>
                             <table>
@@ -787,7 +800,7 @@
                                     <td>Kevin K., Moritz U., Paul S., Sven M.</td>
                                 </tr>
                             </table>
-                            <img src="./img/projects/timetracker_main.jpg">
+                            <img src="./img/projects/timetracker/timetracker_main.jpg">
                             <a class="attribution" href='https://de.freepik.com/psd/browser-fenster'>Browser fenster PSD erstellt von designwarrior - de.freepik.com</a>
                             <div class="link-btn-box">
                                 <a href="https://github.com/SirMightyMo/QT_App" target="_blank" class="btn-link btn-github"></a>
@@ -802,7 +815,7 @@
                                 Aufgabe komplett durchlaufen werden sollte.
                             </p>
                             <h4>Ergebnis</h4>
-                            <img src="./img/projects/timetracker_window.jpg">
+                            <img src="./img/projects/timetracker/timetracker_window.jpg">
                             <p>
                                 Die Zielsetzung unseres fünfköpfigen Teams war eine möglichst plattformunabhängige 
                                 (Windows, MacOs, Linux) Software zum Erfassen von projektbasierter Arbeitszeit (mit Fokus auf 
@@ -817,8 +830,8 @@
                     </div>    
                 </div>
                 <div class="wrapper wrapper-disabled" id="hidden-content">
-                    <div class="overlay-content" id="dmc22" >
-                        <div>
+                    <div class="overlay-content" id="dmc22" onclick="hideContent('dmc22')">
+                        <div onclick="event.stopPropagation()">
                             <a class="close" onclick="hideContent('dmc22')"></a>
                             <h3 class="overlay-hl" id="software">Data Mining Cup (2022)</h3>
                             <table>
@@ -843,7 +856,7 @@
                                     <td>Kevin K., Moritz U.</td>
                                 </tr>
                             </table>
-                            <img src="./img/projects/dmc_main.jpg">
+                            <img src="./img/projects/dmc/dmc_main.jpg">
                             <div class="link-btn-box">
                                 <a href="https://www.data-mining-cup.com/download/dmc-2022-task/?wpdmdl=3193&refresh=62fb60e88cc471660641512" target="_blank" class="btn-link btn-download"></a>
                                 <a href="https://www.haw-hamburg.de/detail/news/news/show/erfolgreiche-premiere-beim-data-mining-cup/" target="_blank" class="btn-link btn-article"></a>
@@ -2779,8 +2792,8 @@
                     </div>    
                 </div>
                 <div class="wrapper wrapper-disabled" id="hidden-content">
-                    <div class="overlay-content" id="codex" >
-                        <div>
+                    <div class="overlay-content" id="codex" onclick="hideContent('codex')">
+                        <div onclick="event.stopPropagation()">
                             <a class="close" onclick="hideContent('codex')"></a>
                             <h3 class="overlay-hl" id="web">Codex (2020)</h3>
                             <table>
@@ -2809,7 +2822,7 @@
                                     <td>Moritz U., Mehmet B., Christopher S.</td>
                                 </tr>
                             </table>
-                            <img src="./img/projects/codex_main.jpg">
+                            <img src="./img/projects/codex/codex_main.jpg">
                             <a class="attribution" href='https://www.freepik.com/psd/browser-mockup'>Browser mockup psd created by designwarrior - www.freepik.com</a>
                             <div class="link-btn-box">
                                 <a href="https://github.com/leanderwernst/codex" target="_blank" class="btn-link btn-github"></a>
@@ -2831,7 +2844,7 @@
                                 Das Design (Aussehen) der Seite war für den Kurs zwar irrelevant und wurde nicht explizit gelehrt, aber trotzdem von 
                                 uns geplant und berücksichtigt. Um sich stärker mit den gestalterischen Grundlagen (CSS) auseinanderzusetzen, wurde auf ein Framework dafür verzichtet.
                             </p>
-                            <img src="./img/projects/codex_main2.jpg">
+                            <img src="./img/projects/codex/codex_main2.jpg">
                             <a class="attribution" href='https://www.freepik.com/psd/presentation-mockup'>Presentation mockup psd created by rezaazmy - www.freepik.com</a>
                             <p>
                                 Die im Rahmen des Projekts umgesetzten Funktionen der Anwendung beinhalten dabei folgendes:
@@ -2874,6 +2887,120 @@
                                 Text angezeigt werden, ebenso wie der letzte Bearbeitungszeitpunkt und die eingestellte Syntax/Sprache.
                                 <br><br>
                                 Die Profile sowie die entsprechend eingestellten Codes sind unter allen Nutzer:innen gegenseitig einsehbar.
+                            </p>
+                        </div>
+                    </div>    
+                </div>
+                <div class="wrapper wrapper-disabled" id="hidden-content">
+                    <div class="overlay-content" id="avprg-afm" onclick="hideContent('avprg-afm')">
+                        <div onclick="event.stopPropagation()">
+                            <a class="close" onclick="hideContent('avprg-afm')"></a>
+                            <h3 class="overlay-hl" id="web">Automatic Foley Machine (2023)</h3>
+                            <table>
+                                <tr>
+                                    <th>Projekt:</th>
+                                    <td>Automatische Video-Vertonung durch Objekterkennung und Nutzung der Web Audio API</td>
+                                </tr>
+                                <tr>
+                                    <th>Kurs:</th>
+                                    <td>Audio-Video-Programmierung</td>
+                                </tr>
+                                <tr>
+                                    <th>Semester:</th>
+                                    <td>3 (Media Systems, HAW Hamburg)</td>
+                                </tr>
+                                <tr>
+                                    <th>Sprachen:</th>
+                                    <td>Javascript, Python, HTML, CSS</td>
+                                </tr>
+                                <tr>
+                                    <th>Hauptaufgaben:</th>
+                                    <td>Frontend (Videoskript), Backend (Node.js)</td>
+                                </tr>
+                                <tr>
+                                    <th>Mitwirkende:</th>
+                                    <td>Kevin K., Moritz U.</td>
+                                </tr>
+                            </table>
+                            <img src="./img/projects/afm/afm_main.jpg">
+                            <a class="attribution" href='https://www.ls.graphics/free/'>MacBook Air 2022 Mockup/Free Hanging Poster Mockup - Lovely and Spotless Graphics</a>
+                            <div class="link-btn-box">
+                                <!-- <a href="https://github.com/KevinKroell/foley-machine" target="_blank" class="btn-link btn-github"></a> -->
+                                <!-- <a href="https://codex-demo.onrender.com/" target="_blank" class="btn-link btn-demo"></a> -->
+                                <a href="./pdf/afm_poster.pdf" target="_blank" class="btn-link btn-pdf"></a>
+                            </div>
+                            <h4>Idee</h4>
+                            <p>
+                                Die Idee der <i>Automatic Foley Machine</i> besteht darin, die Möglichkeit zu bieten, ein Video auf einer Website hochzuladen, 
+                                welches dann im Hintergrund verarbeitet und analysiert wird, um dann mittels Objekterkennung passende Sounds zu diesen Objekten 
+                                zusammen mit dem Video zurückzuliefern und somit das Video neu bzw. überhaupt zu vertonen.<br>
+                                In der Umsetzung wollten wir uns zunächst auf die Erkennung von Tieren konzentrieren.<br>
+                                Die Sounds, die wir je nach Erkennung von der Freesound.org-API anfragen, sollten zudem mithilfe der Möglichkeiten der 
+                                <i>Web Audio API</i> während des Abspielens manipuliert werden können.
+                                <br><br>
+                                Das Projekt ist im Rahmen des Kurses <i>Audio-Video-Programmierung</i> an der HAW Hamburg entstanden, wo uns die Grundlagen 
+                                der Web Audio API sowie OpenCV (Python) vermittelt wurden. Letzteres wurde aber nicht verwendet.
+
+                            </p>
+                            <h4>Umsetzung</h4>
+                            <p>
+                                Unsere Anwendung besteht aus vier Kommunikationspartnern: Dem Client (Browser), dem Node-Server, dem Python-Server und der 
+                                Freesound.org-API, von der wir Sounds beziehen.
+                                <br><br>
+                                <img src="./img/projects/afm/afm_sequence-dia.svg">
+                                <br><br>
+                                <b>Node.js-Webserver</b><br>
+                                Der Webserver bedient den Browser mit den entsprechenden Website-Inhalten und ist dafür zuständig, den Upload entgegenzunehmen.<br>
+                                Das Video wird temporär (max. eine Stunde) auf dem Server gespeichert, damit der Client es von dort später wieder abspielen kann. 
+                                Anschließend kommuniziert der Node-Server mit einem zweiten Server, auf dem ein Python-Programm läuft, und teilt diesem den 
+                                Speicherort des Videos mit, um es analysieren zu können.<br>
+                                Nach erfolgter Analyse sendet der Python-Server ein JSON-Objekt zurück, das Informationen darüber enthält, welche Tiere (Objekte) 
+                                mit welcher Häufigkeit in welchem Frame erkannt wurden. Da wir unmittelbar nach dem Upload des Videos die Dauer sowie die Gesamtzahl 
+                                der Frames aus den Metadaten auslesen, können wir <i>Timestamps</i> zum planen der Sounds berechnen.<br>
+                                Mit der Information, welche Tiere erkannt wurden, werden nun anfragen an die Freesound.org-API gestellt, um Direktlinks zu passenden 
+                                Sounds zu erhalten. Sobald alle Töne gesammelt wurden, werden diese Schließlich zurück an die im Browser dargestellte Website gesendet, 
+                                womit schließlich dynamisch Audio-Elemente generiert werden, die der Manipulation dienen, sowie das Video eingebunden wird, damit 
+                                beides gleichzeitig abgespielt werden kann.
+                                <br>
+                                Auch die Verwendung eines YouTube-Links als Video-Input ist front- sowie backendseitig (bezogen auf Node.js) bereits möglich, 
+                                aufgrund von weiter benötigten Python-Anpassungen im aktuellen Zustand auskommentiert.
+                                <br><br>
+                                <b>Python-Server</b><br>
+                                Sobald der Python-Server über seinen Endpunkt über den Speicherort eines zu verarbeitenden Videos informiert wird, fängt dieser an, 
+                                das Video zu verarbeiten. Wir verwenden hier ein vortrainiertes YOLOv5-Modell, das auf dem COCO dataset trainiert wurde.<br>
+                                Für unser Projekt haben wir den Output von YOLOv5 unseren Bedürfnissen entsprechend angepasst.<br>
+                                Das Modell arbeitet im aktuellen Zustand mit jedem 60. Frame des Videos sowie einem <i>Confidence Threshold</i> von 0.5, um 
+                                einerseits nicht zu ressourcenintensive Arbeit verrichten zu müssen und andererseits einem zu häufigen Abspielen von Sounds aufgrund 
+                                einer zu hohen Erkennungsrate entgegenzuwirken.<br>
+                                Die Ergebnisse der Objekterkennung werden in einem JSON-Format an den Node-Server zurückgegeben, der wie zuvor beschrieben nun das 
+                                weitere Handling übernimmt.
+                                <br><br>
+                                <b>Freesound-API</b><br>
+                                Mit der Freesound-API wird in zwei Schritten kommuniziert: Im ersten Schritt werden Suchergebnisse für die erkannten Objekte angefragt. 
+                                Da diese lediglich IDs und allgemeine Informationen beinhalten, muss in einem zweiten Schritt mit einer konkreten ID nach den Direktlinks 
+                                der Sounds gefragt werden.<br>
+                                Ein limitierender Faktor ist dabei das API-Limit von 60 Anfragen pro Minute (und 2000 pro Tag), wodurch eine Multi-User-Nutzung praktisch 
+                                unmöglich ist. Um Fehler bei sehr langen Videos bzw. solchen, die sehr viele Tiere beinhalten zu vermeiden, werden die Anfragen auf maximal 
+                                60 pro Video-Upload reduziert. Auch werden die Antworten der API (pro Upload) zwischengespeichert, um redundaten Anfragen zu vermeiden und bei Bedarf 
+                                auf die zwischengespeicherten Ergebnisse zurückzugreifen.<br>
+                                Abhilfe würde eine lokale auf dem Server angelegte Soundbibliothek schaffen, die die Freesound-API obsolet machen würde.
+                                <br><br>
+                                In der jetzigen Ausbaustufe können lediglich *.mp4-Dateien verarbeitet werden. Die Architektur des Projekts wurde aber so aufgebaut, 
+                                dass Erweiterungen wie die Erkennung per Webcam, YouTube, weitere Video- oder Bildformate möglich sind.<br>
+                                <br><br>
+                                <b>Web Audio API</b>
+                                Was die Audiosignal-Verarbeitung betrifft, haben wir uns vom Signalweg eines klassischen Mischpultes inspirieren lassen. Jedes Tier erhält 
+                                einen eigenen Audiokanal, wobei gleiche Tiere im selben Kanal landen. Diese Kanäle enthalten jeweils Gain-Regler, eine Equalizer-Sektion 
+                                sowie einen Effektweg, über den ein Reverb hinzugemischt werden kann. Auch lässt sich das Panning über einen Regler einstellen.<br>
+                                <br>
+                                <img src="./img/projects/afm/afm_audio-flow.jpg">
+                                <br><br>
+                                <b>Deployment</b><br>
+                                Zur Präsentation des Projektes im Rahmen des Kurses wurde die Anwendung auf einer AWS Linux Maschine (Free Tier) <i>deployed</i>.<br>
+                                Dabei liefen der Node-Server sowie der Python-Server in derselben Umgebung als lokale Server. Anfragen wurden dann via NGINX an diese 
+                                lokalen Server weitergeleitet.<br>
+                                Aufgrund des Deployments wurde die Verarbeitung der Videos durch das YOLOv5-Modell mit der CPU durchgeführt. Durch die limitierten 
+                                Ressourcen der AWS Maschine ist aber auch hier eine Multi-User-Nutzung kaum möglich.
                             </p>
                         </div>
                     </div>    

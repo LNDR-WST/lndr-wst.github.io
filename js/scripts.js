@@ -1,3 +1,28 @@
+window.addEventListener('load', function() {
+    /* Check for URL Parameters */
+    checkURLParameters();
+    /* Smooth Scrolling to Anchor */
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+    
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+})
+
+/* Check for URL Parameters */
+function checkURLParameters() {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    if (urlParams.has('project')) {
+        const project = urlParams.get('project');
+        showContent(project);
+    }
+}
+
 /* Overlay Content-Toggle */
 
 function showContent(id) {
