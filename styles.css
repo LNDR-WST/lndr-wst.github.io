@@ -89,6 +89,12 @@ body {
     font-size: 24px;
 }
 
+.noscript {
+  font-weight: bold;
+  text-align: center;
+  color: #888 !important;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
