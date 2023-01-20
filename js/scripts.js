@@ -23,9 +23,24 @@ function checkURLParameters() {
     }
 }
 
+/* Add URL Parameters */
+function addURLParameters(id) {
+    const url = new URL(window.location.href);
+    url.searchParams.set('project', id);
+    window.history.pushState({}, '', url);
+}
+
+/* Remove URL Parameters */
+function removeURLParameters() {
+    const url = new URL(window.location.href);
+    url.searchParams.delete('project');
+    window.history.pushState({}, '', url);
+}
+
 /* Overlay Content-Toggle */
 
 function showContent(id) {
+    addURLParameters(id);
     document.getElementById('nav').style.visibility = "hidden";
     document.body.style.overflow = "hidden";
     document.getElementById(id).style.opacity = 100;
@@ -33,6 +48,7 @@ function showContent(id) {
 }
 
 function hideContent(id) {
+    removeURLParameters()
     document.getElementById('nav').style.visibility = "visible";
     document.body.style.overflow = "visible";
     document.getElementById(id).style.opacity = 0;
