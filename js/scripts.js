@@ -37,6 +37,26 @@ function removeURLParameters() {
     window.history.pushState({}, '', url);
 }
 
+/* Read URL Parameters */
+function readURLParameters() {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    if (urlParams.has('project')) {
+        const project = urlParams.get('project');
+        return project;
+    }
+}
+
+/* Close Content on Escape */
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        const id = readURLParameters();
+        if (id != undefined) {
+            hideContent(id);
+        }
+    }
+});
+
 /* Overlay Content-Toggle */
 
 function showContent(id) {
