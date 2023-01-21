@@ -44,7 +44,7 @@
   font-family: 'Staatliches', cursive;
   text-transform: uppercase;
   /* text-shadow: -1px 2px 4px rgba(0,0,0,0.5), 1px -2px 4px rgba(255,255,255,0.8); */
-  text-shadow: -1px 1px 3px rgba(0,0,0,0.5), 1px -1px 3px rgba(255,255,255,0.8);
+  text-shadow: -1px 1px 2px rgba(0,0,0,0.5), 1px -1px 2px rgba(255,255,255,0.8);
 }
 
 .inputboxburger {
