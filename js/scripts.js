@@ -103,16 +103,7 @@ for (let i = 0; i < checkboxes.length; i++) {
     }
 }
 
-/* Open project when parameter was given in searchbar */
 
-function openProject(parameterString) {
-    const parameters = new URLSearchParams(parameterString);
-    if (parameters.has('project')) {
-        const project = parameters.get('project');
-        showContent(project);
-    }
-}
-openProject(window.location.search);
 
 /* Card filter functions*/
 

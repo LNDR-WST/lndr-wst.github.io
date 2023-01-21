@@ -225,7 +225,7 @@ video {
 }
 
 #section p,#section ul {
-  color: black;
+  color: #444;
 }
 
 #hidden-content p,#hidden-content ul {
@@ -332,7 +332,7 @@ video {
 }
 
 #card-headline {
-  color: black;
+  color: black !important;
   font-weight: bold;
   font-size: 16px;
   margin: 0;
@@ -340,7 +340,7 @@ video {
 
 #card-info {
   font-size: 16px;
-  color: black;
+  color: black !important;
   margin: 0;
 }
 
