@@ -199,6 +199,7 @@ video {
   width: 25vmin;
   height: 25vmin;
   display: flex;
+  flex: 0.5;
 }
 
 .lw-img {
