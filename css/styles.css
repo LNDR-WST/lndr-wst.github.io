@@ -185,7 +185,7 @@ video {
   display: flex;
   justify-content: space-between;
   align-items: last baseline;
-  -webkit-align-items: last baseline;
+  -webkit-align-items: center;
 }
 
 .lw-img {
