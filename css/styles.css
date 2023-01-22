@@ -173,12 +173,14 @@ video {
   display: flex;
   justify-content: space-between;
   align-items: last baseline;
+  -webkit-align-items: last baseline;
 }
 
 .lw-img {
   flex: 1;
   width: auto; 
-  height: auto; 
+  height: auto;
+  margin-left: 25px;
   max-height: 15em;
   filter: drop-shadow(-0.025em 0.025em 0.2em rgba(0,0,0,0.5)) drop-shadow(0.025em -0.025em 0.25em rgba(255,255,255,0.8));
   transition: all 0.5s;
