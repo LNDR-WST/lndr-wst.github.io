@@ -121,7 +121,8 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {
-  font-size: 8em;
+  /* font-size: 8em; */
+  font-size: 16vmin !important;
   text-shadow: -0.025em 0.025em 0.056em rgba(0,0,0,0.5), 0.025em -0.025em 0.056em rgba(255,255,255,0.8);
   margin: 65px 0 0 0;
 }
@@ -141,6 +142,10 @@ h3 {
   font-size: 4em;
   text-shadow: -0.025em 0.025em 0.056em rgba(0,0,0,0.5), 0.025em -0.025em 0.056em rgba(255,255,255,0.8);
   margin: 32px 0;
+}
+
+h3.stage {
+  font-size: 8vmin !important;
 }
 
 h3.overlay-hl {
@@ -211,7 +216,7 @@ video {
   height: 4px;
   display: block;
   box-shadow: -1px 2px 4px rgba(0,0,0,0.5), 1px -2px 4px rgba(255,255,255,0.8);
-  margin: 3em 0 3em 0;
+  margin: 2em 0px;
 }
 
 .section p, .section ul {
@@ -972,14 +977,13 @@ img {
 * Scroll Down Button
 * https://codepen.io/matthewhirsch/pen/qOxmoz
 */
+.scroll-down-aligner {
+  display: flex;
+  justify-content: center;
+}
+
 .scroll-down {
-  position: relative;
-  left: 50%;
-  bottom: 10px;
-  display: block;
   cursor: pointer;
-  text-align: center;
-  text-decoration: none;
   width: 25px;
   height: 25px;
   border-bottom: 10px solid #00000020;
@@ -987,23 +991,23 @@ img {
   -webkit-transform: translate(-50%, 0%) rotate(45deg);
   -moz-transform: translate(-50%, 0%) rotate(45deg);
   transform: translate(-50%, 0%) rotate(45deg);
-  -webkit-animation: fade_move_down 4s ease-in-out infinite;
-  -moz-animation: fade_move_down 4s ease-in-out infinite;
-  animation: fade_move_down 4s ease-in-out infinite;
+  -webkit-animation: fade-out-down 4s ease-in-out infinite;
+  -moz-animation: fade-out-down 4s ease-in-out infinite;
+  animation: fade-out-down 4s ease-in-out infinite;
 }
 
 /* animated scroll arrow animation */
-@-webkit-keyframes fade_move_down {
+@-webkit-keyframes fade-out-down {
   0%   { -webkit-transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
   50%  { opacity: 1;  }
   100% { -webkit-transform:translate(0,10px) rotate(45deg); opacity: 0; }
 }
-@-moz-keyframes fade_move_down {
+@-moz-keyframes fade-out-down {
   0%   { -moz-transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
   50%  { opacity: 1;  }
   100% { -moz-transform:translate(0,10px) rotate(45deg); opacity: 0; }
 }
-@keyframes fade_move_down {
+@keyframes fade-out-down {
   0%   { transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
   50%  { opacity: 1;  }
   100% { transform:translate(0,10px) rotate(45deg); opacity: 0; }
