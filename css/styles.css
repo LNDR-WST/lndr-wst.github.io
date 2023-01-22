@@ -68,6 +68,18 @@
        url('../fonts/montserrat-v25-latin-700italic.svg#Montserrat') format('svg'); /* Legacy iOS */
 }
 
+/* Hide Scrollbar */
+
+html {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;    /* Firefox */
+}
+
+html::-webkit-scrollbar {   /* Chrome, Safari and Opera */
+  display: none;
+}
+
+/* Global */
 
 body {
     background-color: #c0c0c0;
