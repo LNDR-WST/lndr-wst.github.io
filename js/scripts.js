@@ -63,16 +63,14 @@ function showContent(id) {
     addURLParameters(id);
     document.getElementById('nav').style.visibility = "hidden";
     document.body.style.overflow = "hidden";
-    document.getElementById(id).style.opacity = 100;
-    document.getElementById(id).style.visibility = "visible"; 
+    document.getElementById(id).classList.remove('hidden');
 }
 
 function hideContent(id) {
     removeURLParameters()
     document.getElementById('nav').style.visibility = "visible";
     document.body.style.overflow = "visible";
-    document.getElementById(id).style.opacity = 0;
-    document.getElementById(id).style.visibility = "hidden";
+    document.getElementById(id).classList.add('hidden');
 }
 
 /* Navigation Hide */
