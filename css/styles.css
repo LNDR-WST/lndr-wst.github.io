@@ -725,6 +725,10 @@ img {
   width: fit-content;
 }
 
+img.float-right, img.float-left {
+  margin: 1em 0;
+}
+
 .attribution {
   font-size: 0.4em;
   text-align: right;
