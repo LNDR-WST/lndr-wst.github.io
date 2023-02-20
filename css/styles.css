@@ -692,6 +692,10 @@ table.normal td.first {
   margin-bottom: -5px;
 }
 
+h1 > p, h2 > p, h3 > p, h4 > p, h5 > p, h6 > p {
+  margin-top: 0;
+}
+
 p {
   width: 100%;
 }
@@ -1116,13 +1120,13 @@ img.float-right, img.float-left {
   }
   img.float-right {
     float: right;
-    margin: 1em;
+    margin: 0 1em;
     max-width: 50%;
   }
   
   img.float-left {
     float: left;
-    margin: 1em;
+    margin: 0 1em;
     max-width: 50%;
   }
 }
@@ -1134,13 +1138,13 @@ img.float-right, img.float-left {
   }
   img.float-right {
     float: right;
-    margin: 1em;
+    margin: 0 1em;
     max-width: 50%;
   }
   
   img.float-left {
     float: left;
-    margin: 1em;
+    margin: 0 1em;
     max-width: 50%;
   }
 }
@@ -1152,13 +1156,13 @@ img.float-right, img.float-left {
   }
   img.float-right {
     float: right;
-    margin: 1em;
+    margin: 0 1em;
     max-width: 50%;
   }
   
   img.float-left {
     float: left;
-    margin: 1em;
+    margin: 0 1em;
     max-width: 50%;
   }
 }
@@ -1170,13 +1174,13 @@ img.float-right, img.float-left {
   }
   img.float-right {
     float: right;
-    margin: 1em;
+    margin: 0 1em;
     max-width: 50%;
   }
   
   img.float-left {
     float: left;
-    margin: 1em;
+    margin: 0 1em;
     max-width: 50%;
   }
 }
@@ -1187,13 +1191,13 @@ img.float-right, img.float-left {
   }
   img.float-right {
     float: right;
-    margin: 1em;
+    margin: 0 1em;
     max-width: 50%;
   }
   
   img.float-left {
     float: left;
-    margin: 1em;
+    margin: 0 1em;
     max-width: 50%;
   }
 }
