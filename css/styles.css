@@ -1108,12 +1108,34 @@ img {
   body {
     font-size: 16px;
   }
+  img.float-right {
+    float: right;
+    margin: 1em;
+    max-width: 50%;
+  }
+  
+  img.float-left {
+    float: left;
+    margin: 1em;
+    max-width: 50%;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
   body {
     font-size: 18px;
+  }
+  img.float-right {
+    float: right;
+    margin: 1em;
+    max-width: 50%;
+  }
+  
+  img.float-left {
+    float: left;
+    margin: 1em;
+    max-width: 50%;
   }
 }
 
@@ -1122,6 +1144,17 @@ img {
   body {
     font-size: 20px;
   }
+  img.float-right {
+    float: right;
+    margin: 1em;
+    max-width: 50%;
+  }
+  
+  img.float-left {
+    float: left;
+    margin: 1em;
+    max-width: 50%;
+  }
 }
 
 /* XX-Large devices (larger desktops, 1400px and up) */
@@ -1129,11 +1162,33 @@ img {
   body {
     font-size: 24px;
   }
+  img.float-right {
+    float: right;
+    margin: 1em;
+    max-width: 50%;
+  }
+  
+  img.float-left {
+    float: left;
+    margin: 1em;
+    max-width: 50%;
+  }
 }
 
 @media (min-width: 2560px) {
   .wrapper {
     max-width: 1920px;
+  }
+  img.float-right {
+    float: right;
+    margin: 1em;
+    max-width: 50%;
+  }
+  
+  img.float-left {
+    float: left;
+    margin: 1em;
+    max-width: 50%;
   }
 }
 
