@@ -960,11 +960,14 @@ img.float-right, img.float-left {
   .overlay-content.hidden {
     visibility: hidden;
     opacity: 0;
+    transition: opacity 0s, visibility 0s;
   }
 
   /* Class is needed to keep fixed elements like close button
      when using backdrop-filter. */
   .blurred {
+    visibility: visible;
+    opacity: 1;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -974,8 +977,8 @@ img.float-right, img.float-left {
     background-color: rgba(0,0,0,0.85);
     backdrop-filter: blur(9.2px) opacity(1);
     -webkit-backdrop-filter: blur(9.2px) opacity(1);
-    transition: backdrop-filter 1s, -webkit-backdrop-filter 1s;
-    transition-timing-function: ease-in;
+    transition: visibility 1s, opacity 1s;
+    transition-timing-function: cubic-bezier();
     /* Hide Scrollbars */
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none;    /* Firefox */
@@ -985,11 +988,10 @@ img.float-right, img.float-left {
     display: none;
   }
   .overlay-content.hidden .blurred {
-    backdrop-filter: blur(9.2px) opacity(0);
-    -webkit-backdrop-filter: blur(9.2px) opacity(0);
-    transition: backdrop-filter 0.1s, -webkit-backdrop-filter 0.1s;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0s;
   }
-
 
   .overlay-content .overlay-wrapper {
     display: flex;
