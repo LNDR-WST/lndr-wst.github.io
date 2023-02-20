@@ -65,6 +65,19 @@
                 <div id="cardwrapper">
                     <div class="card games">
                         <div class="card-header">
+                            <img class="lazyload" data-src="/img/projects/audio-mixing/audio-mixing_screen.webp" alt="Audio Mixing Thumbnail">
+                        </div>
+                        <div class="card-content">
+                            <div id="card-tag-wrapper">
+                                <div class="noselect" id="card-tag">Games</div>
+                            </div>
+                            <p id="card-headline">Audio Mixing</p>
+                            <p id="card-info">Virtuelles Trainingssystem zum Mischen lernen an einem analogen Mischpult (<span style="font-style: italic;">Unity</span>)</p>
+                        </div>                        
+                        <div id="card-btn" onclick="showContent('audio-mixing')"><a class="noselect">Details</a></div>
+                    </div>
+                    <div class="card games">
+                        <div class="card-header">
                             <img class="lazyload" data-src="/img/projects/fah/fah_screen.webp" alt="Finding a Home Thumbnail">
                         </div>
                         <div class="card-content">
@@ -3013,6 +3026,102 @@
                                 lokalen Server weitergeleitet.<br>
                                 Aufgrund des Deployments wurde die Verarbeitung der Videos durch das YOLOv5-Modell mit der CPU durchgeführt. Durch die limitierten 
                                 Ressourcen der AWS Maschine ist aber auch hier eine Multi-User-Nutzung kaum möglich.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="overlay-content hidden" id="audio-mixing" onclick="hideContent('audio-mixing')">
+                    <a class="close" onclick="hideContent('audio-mixing')"></a>
+                    <div class="blurred">
+                        <div class="overlay-wrapper" onclick="event.stopPropagation()">
+                            <h3 class="overlay-hl" id="games">Audio Mixing (2023)</h3>
+                            <table>
+                                <tr>
+                                    <th>Projekt:</th>
+                                    <td>Virtuelles Trainingssystem zum Audio-Mischen lernen an einem analogen Mischpult</td>
+                                </tr>
+                                <tr>
+                                    <th>Kurs:</th>
+                                    <td>Virtuelle Systeme</td>
+                                </tr>
+                                <tr>
+                                    <th>Semester:</th>
+                                    <td>6 (Media Systems, HAW Hamburg)</td>
+                                </tr>
+                                <tr>
+                                    <th>Sprachen:</th>
+                                    <td>C# (Unity)</td>
+                                </tr>
+                                <tr>
+                                    <th>Mitwirkende:</th>
+                                    <td>Moritz U.</td>
+                                </tr>
+                            </table>
+                            <img data-src="./img/projects/audio-mixing/audio-mixing_main.webp" class="lazyload" alt="Audio Mixing Computer & Software Package Mockup">
+                            <a class="attribution" href='https://de.freepik.com/freie-psd/realistisches-computerdesign_1609119.htm'>Mockup designed by Zlatko_Plamenov / Freepik</a>
+                            <div class="link-btn-box">
+                                <a href="https://github.com/LeanderWernst/audio-mixing/" target="_blank" class="btn-link btn-github"></a>
+                                <a href="https://github.com/LeanderWernst/audio-mixing/releases/tag/v1.0.0" target="_blank" class="btn-link btn-demo"></a>
+                            </div>
+                            <h4>Idee</h4>
+                            <p>
+                                Angehende Audio-Engineers, zukünftige Producers oder allgemein Personen mit Interesse an der Musikproduktion haben nur selten die Möglichkeit, 
+                                in Ruhe und in eigenem Tempo die Funktionsweisen eines analogen Mischpults zu erlernen.<br>
+                                Insbesondere das Live-Mixing ist oft hektisch, erfordert nicht nur professionelles Equipment sondern auch mehrere Personen und die Hände an ein 
+                                echtes Mischpult zu bekommen, stellt sich meist schwierig dar: Aufgrund des hohen Preises lassen sich professionele Mischpulte auch nur in 
+                                professionellen Betrieben oder gut ausgestatteten Bildungseinrichtungen finden. Ist eines vorhanden, kann es oft nicht oder nur für kurze unflexible 
+                                Zeiträume zum freien Einsatz freigegeben werden, da es entweder den Rest der Zeit fest in professionelle Abläufe eingebunden ist oder nicht genügend  
+                                Zeitslots für zu viele Personen vorhanden sind. Das echte System ist somit schnell zu teuer, zu selten oder für Einzelpersonen zu komplex.
+                                <br><br>
+                                Das virtuelle Trainings-System <b>Audio Mixing</b> soll hier Abhilfe schaffen. Denn Neues lernen erfordert Ruhe, benötigt durch individuelles 
+                                Lerntempo auch unterschiedlich lange, sollte somit auch zeitlich flexibel zur Verfügung stehen und möglichst unabhängig von anderen Personen sein.<br>
+                                Die Vorteile einer virtuellen Lösung sind entsprechend, dass sie vergleichsweise kostengünstig umzusetzen ist, einen realistischen Eindruck von 
+                                Größenverhältnissen, Positionen, Bedienung und Funktionen vermitteln kann, auf viele erdenkliche Weisen erweitert und konfiguriert werden kann und 
+                                vor allem unbegrenzt verteilbar, wiederholbar und haltbar ist.
+                            </p>
+                            <h4>Umsetzung</h4>
+                            <p>
+                                <b>Audio Mixing von <i>UW-Audio</i></b> wurde mit Unity (2021.3.12f1, Universal Render Pipeline) entwickelt und zeigt die Funktionsweise eines analogen 
+                                Mischpults am Beispiel eines kleinen Schlagzeug-Sets bestehend aus Bassdrum, Snare und Hi-Hat.<br>
+                                Die Anwendung ist in zwei Teile aufteilt: Über das Startmenü lässt sich der Trainings-Modus auswählen, der einen Schritt für Schritt mit Anweisungen 
+                                durch das Mischen führt. Der ebenso verfügbare Demo-Modus zeigt kurz und knapp die durchzuführenden Schritte des Trainigns in Form von Animationen.
+                                <br><br>
+                                Die Anwendung kann im derzeitgen Stand in zwei Komplexitätsstufen ausgeführt werden: Standardmäßig sind alle Schritte aktiviert, was insgesamt 47 
+                                Aktionsscrhitte umfasst. Dies beinhaltet den ersten Teil, in dem es um das Einstellen von angemessenen Pegeln geht, sowie den zweiten Teil, der sich 
+                                der Konfiguration der Equalizer zum Anpassen der Schlagzeug-Sounds widmet. Im Start-Menü können die Equalizer deaktiviert werden, wodurch sich 
+                                die Anzahl der Schritte auf 17 reduziert. Im letzten Schritt ist es möglich, auch vom Training losgelöste Aktionen durchzuführen und noch einmal 
+                                sämtliche Einstellungen zu verändern oder sich den Vorher-/Nachher-Sound durch Umschalten der Equalizer-Taste anzuhören.
+                                <br><br>
+                                Die Anweisungen sind an die Inhalte von Fachbüchern angelehnt, um eine möglichst realistische und professionelle Anleitung zu gewährleisten.<br>
+                                Feinheiten wie Raumakustik oder zusätzliche Monitormixe neben dem Frontmix wurden vernachlässigt. Die Steuerung bedient sich einer computerspieltypischen 
+                                Belegung mit Maus und Tastatur (WASD), was u.U. für Personen mit wenig Erfahrung derartiger Systeme zunächst eine Hürde sein kann, in der Regel aber 
+                                schnell erlernt ist. Auch fehlt der Anwendung mit Version 1.0.0 noch ein langsamer Einstieg, um Personen ganz ohne Vorkenntnisse zunächst zu erklären, 
+                                was mit einzelnen Elementen (Fadern, Potentiometern etc.) gemeint ist oder bspw. wie das Endergebnis im Vergleich zum Start klingen soll.
+                                <br><br>
+                                <img class="lazyload float-right" data-src="/img/projects/audio-mixing/audio-mixing_training.webp" alt="Screenshot of Training Mode">
+                                <b>Training</b><br>
+                                Der Trainings-Modus beinhaltet Anweisungen in Form von Texten, die standardmäßig von einer Computerstimme vorgelesen werden, die jederzeit (sowohl im 
+                                Start-Menü als auch während des Trainings) wieder deaktiviert werden kann.<br>
+                                Mithilfe der Anweisungen klickt der oder die Anwender:in bestimmte Elemente des Mischpultes an und drückt, dreht oder schiebt diese. Dabei wird sowohl 
+                                sowohl durch Text als auch durch Ton Feedback gegeben, ob eine Aktion korrekt war. Ein zusätzlicher Hilfe-Button öffnet einen Hilfe-Text, der teilweise 
+                                zusätzlich Informationen zur geforderten Aktion beinhaltet und Hintergrundwissen liefern kann. Eine Anzeige gibt darüber Auskunft, wie viele Fehler gemacht 
+                                und wie viele Hilfen in Anspruch genommen wurden. Dabei wird die Hilfe nur einmal pro Aktion gezählt. Durchgeführte Aktionen müssen entweder bestätigt werden 
+                                oder führen automatisch zur Prüfung auf Korrektheit. Eine korrekt durchgeführte Aktion startet dann die nächste Anweisung.<br>
+                                Die Steuerung kann jederzeit mithilfe der STRG-Taste eingeblendet werden. 
+                                <br><br>
+                                <img class="lazyload float-left" data-src="/img/projects/audio-mixing/audio-mixing_demo.webp" alt="Screenshot of Demo Mode">
+                                <b>Demo</b><br>
+                                Der Demo-Modus ergänzt das Training. Er zeigt in sich immer wiederholenden Animationen, die gleichtzeitig auch den hörbaren Zustand des Mischpultes ändern, 
+                                die zum jeweiligen Schritt zugehörigen Aktionen. Dabei wird das jeweilge Interaktions-Element hevorgehoben. Die einzelnen Schritte können so im 
+                                Schnelldurchlauf durchgegangen werden, auch ein Zurückspringen ist möglich. Kameratransitionen wechseln zwischen verschiedenen Blickwinkeln, um das 
+                                jeweilige Element in den Fokus zu rücken.<br>
+                                Die zu jedem Schritt gespielten Schlagzeug-Sounds können mit einem Klick deaktiviert werden.
+                                <br><br>
+                                <b>Systemvoraussetzungen</b><br>
+                                Um das virtuelle System zu nutzen, wird ein Computer mit Windows, MacOS oder Linux sowie Maus und Tastatur benötigt. Eine mobile Anwendung ist aufgrund 
+                                der Steuerung derzeit nicht möglich.<br>
+                                Die Anwendung ist für gängige, horzontale Auflösungen optimiert, bei vertikalen Auflösungen kann es zu Darstellungsfehlern kommen.<br>
+                                Performance-Probleme mit zu alter Hardware sind möglich.
                             </p>
                         </div>
                     </div>
