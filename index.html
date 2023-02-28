@@ -54,12 +54,13 @@
                     <summary>Filter</summary> 
                     <div class="filter-btn-wrapper" id="filter-btn-wrapper">
                         <div class="filter-btn noselect active" id="filter-btn-all" onclick="filterClick(this.id)">All</div>
-                        <div class="filter-btn noselect" id="filter-btn-software" onclick="filterClick(this.id)">Software</div>
+                        <div class="filter-btn noselect" id="filter-btn-application" onclick="filterClick(this.id)">Application</div>
                         <div class="filter-btn noselect" id="filter-btn-web" onclick="filterClick(this.id)">Web</div>
                         <div class="filter-btn noselect" id="filter-btn-mobile" onclick="filterClick(this.id)">Mobile</div>
                         <div class="filter-btn noselect" id="filter-btn-games" onclick="filterClick(this.id)">Games</div>
                         <div class="filter-btn noselect" id="filter-btn-graphics" onclick="filterClick(this.id)">Graphics</div>
                         <div class="filter-btn noselect" id="filter-btn-datascience" onclick="filterClick(this.id)">Data Science</div>
+                        <div class="filter-btn noselect" id="filter-btn-machlearn" onclick="filterClick(this.id)">Mach. Learn.</div>
                     </div>
                 </details>
                 <div id="cardwrapper">
@@ -129,27 +130,27 @@
                         </div>                        
                         <div id="card-btn" onclick="showContent('three')"><a class="noselect">Details</a></div>
                     </div>
-                    <div class="card software mobile">
+                    <div class="card application mobile">
                         <div class="card-header">
                             <img class="lazyload" data-src="/img/projects/mischifischi/mischifischi_screen.webp" alt="MischiFischi-App Thumbnail">
                         </div>
                         <div class="card-content">
                             <div id="card-tag-wrapper">
                                 <div class="noselect" id="card-tag">Mobile</div>
-                                <div class="noselect" id="card-tag">Software</div>
+                                <div class="noselect" id="card-tag">Application</div>
                             </div>
                             <p id="card-headline">MischiFischi App</p>
                             <p id="card-info">Mit <i>React Native</i> entwickelte App zum Erstellen von Fisch-Grafiken</p>
                         </div>                        
                         <div id="card-btn" onclick="showContent('mischifischi')"><a class="noselect">Details</a></div>
                     </div>
-                    <div class="card software">
+                    <div class="card application">
                         <div class="card-header">
                             <img class="lazyload" data-src="/img/projects/timetracker/timetracker_screen.webp" alt="Timetracker Thumbnail">
                         </div>
                         <div class="card-content">
                             <div id="card-tag-wrapper">
-                                <div class="noselect" id="card-tag">Software</div>
+                                <div class="noselect" id="card-tag">Application</div>
                             </div>
                             <p id="card-headline">Timetracker</p>
                             <p id="card-info">In <span style="font-style: italic;">Java</span> geschriebene Software zur projektbasierten Zeiterfassung (Prototyp)</p>
@@ -169,12 +170,13 @@
                         </div>                        
                         <div id="card-btn" onclick="showContent('codex')"><a class="noselect">Details</a></div>
                     </div>
-                    <div class="card datascience">
+                    <div class="card datascience machlearn">
                         <div class="card-header">
                             <img class="lazyload" data-src="/img/projects/dmc/dmc_screen.webp" alt="Data Mining Cup 22 Thumbnail">
                         </div>
                         <div class="card-content">
                             <div id="card-tag-wrapper">
+                                <div class="noselect" id="card-tag">Mach. Learn.</div>
                                 <div class="noselect" id="card-tag">Data Science</div>
                             </div>
                             <p id="card-headline">Data Mining Cup 2022<br>(Platz 16)</p>
@@ -182,12 +184,13 @@
                         </div>                        
                         <div id="card-btn" onclick="showContent('dmc22')"><a class="noselect">Details</a></div>
                     </div>
-                    <div class="card web">
+                    <div class="card web machlearn">
                         <div class="card-header">
                             <img class="lazyload" data-src="/img/projects/afm/afm_screen.webp" alt="Automatic Foley Machine Thumbnail">
                         </div>
                         <div class="card-content">
                             <div id="card-tag-wrapper">
+                                <div class="noselect" id="card-tag">Mach. Learn.</div>
                                 <div class="noselect" id="card-tag">Web</div>
                             </div>
                             <p id="card-headline">Automatic Foley Machine</p>
@@ -715,7 +718,7 @@
                     <a class="close" onclick="hideContent('mischifischi')"></a>
                     <div class="blurred">
                         <div class="overlay-wrapper" onclick="event.stopPropagation()">
-                            <h3 class="overlay-hl" id="software">MischiFischi (2022)</h3>
+                            <h3 class="overlay-hl" id="application">MischiFischi (2022)</h3>
                             <table>
                                 <tr>
                                     <th>Projekt:</th>
@@ -803,7 +806,7 @@
                     <a class="close" onclick="hideContent('timetracker')"></a>
                     <div class="blurred">
                         <div class="overlay-wrapper" onclick="event.stopPropagation()">
-                            <h3 class="overlay-hl" id="software">Timetracker (2022)</h3>
+                            <h3 class="overlay-hl" id="application">Timetracker (2022)</h3>
                             <table>
                                 <tr>
                                     <th>Projekt:</th>
@@ -859,7 +862,7 @@
                     <a class="close" onclick="hideContent('dmc22')"></a>
                     <div class="blurred">
                         <div class="overlay-wrapper" onclick="event.stopPropagation()">
-                            <h3 class="overlay-hl" id="software">Data Mining Cup (2022)</h3>
+                            <h3 class="overlay-hl" id="application">Data Mining Cup (2022)</h3>
                             <table>
                                 <tr>
                                     <th>Projekt:</th>
