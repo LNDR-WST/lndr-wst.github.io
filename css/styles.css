@@ -88,6 +88,10 @@ body {
     font-size: 24px;
 }
 
+.dark-text {
+  color: #131313;
+}
+
 .noscript {
   font-weight: bold;
   text-align: center;

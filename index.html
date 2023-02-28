@@ -1181,20 +1181,21 @@
                                 Der erste vielversprechende Ansatz war eine Klassifikation, da die geforderten 
                                 Werte in der submissions.csv bereits Klassen darstellen (Werte aus {0, 1, 2, 3, 4}). 
                                 Das konkrete Verfahren hierfür war zunächst nicht sonderlich wichtig. Viel mehr stellte 
-                                sich die Frage, wie wir den vorhandenen Datensatz labeln und damit die Zielvariable für 
-                                ein entsprechendes Klassifikationsverfahren definieren.<br> 
+                                sich die Frage, wie der vorhandene Datensatz gelabelt werden könnte, um die Zielvariable für 
+                                ein entsprechendes Klassifikationsverfahren zu definieren.<br> 
                                 Eine Idee dazu war es, das Datum einer Bestellung in die entsprechende Woche des 
-                                jeweiligen Monats umzuwandeln, den Monat also zu vierteln. Die Problematik allerdings 
-                                hierbei war, dass die Klasse 0 somit unbekannt bleibt. Um diese unbekannte Klasse 0 zu 
-                                definieren, müssten Käufe in die Monate aufgenommen werden, die nicht stattgefunden hatten. 
+                                jeweiligen Monats umzuwandeln, den Monat also zu vierteln. Die Problematik 
+                                hierbei war, dass die Klasse 0 so unbekannt blieb. Um diese unbekannte Klasse 0 zu 
+                                definieren, hätten auch nicht stattgefundene Käufe von Produkten in die Monate aufgenommen 
+                                werden müssen. 
                                 Hierzu gab es zwar Lösungsansätze unsererseits, die aber entweder dazu führten, dass 
-                                ein entsprechendes Modell dann zu viele Nullen antrainiert bekam und somit die 
+                                ein entsprechendes Modell zu viele Nullen antrainiert bekam und somit die 
                                 Wahrscheinlichkeit der Voraussage einer Null (kein Wiederkauf) unwahrscheinlich stark 
                                 anstieg. Oder es waren Ansätze, die zwar die Häufigkeiten der auftretenden Klassen 
                                 in den historischen Bestelldaten beibehalten hätten, aber nicht von uns getestet werden 
                                 konnten, da wir damit den Datensatz zu sehr vergrößerten und so Speicherprobleme (RAM) 
                                 provoziert wurden.<br>
-                                An Verfahren wurden hier XGBoost (Classifier), Random-Forest und ein einfacher 
+                                Als Verfahren wurden hier XGBoost (Classifier), Random-Forest und ein einfacher 
                                 Decision-Tree verwendet.
                                 <br><br>
                                 <b>Regression</b><br>
@@ -3128,7 +3129,7 @@
                             <p>
                                 Um das virtuelle System zu nutzen, wird ein Computer mit Windows, MacOS oder Linux sowie Maus und Tastatur benötigt. Eine mobile Anwendung ist aufgrund 
                                 der Steuerung derzeit nicht möglich.<br>
-                                Die Anwendung ist für gängige, horzontale Auflösungen optimiert, bei vertikalen Auflösungen kann es zu Darstellungsfehlern kommen.<br>
+                                Die Anwendung ist für gängige, horizontale Auflösungen optimiert, bei vertikalen Auflösungen kann es zu Darstellungsfehlern kommen.<br>
                                 Performance-Probleme mit zu alter Hardware sind möglich.
                             </p>
                         </div>
