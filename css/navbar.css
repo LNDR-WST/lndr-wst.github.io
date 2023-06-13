@@ -33,6 +33,33 @@
   }
 }
 
+.nav-buttons {
+  display: flex;
+  align-items: center;
+}
+
+a.nav-button {
+  display: flex;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  margin: 0 8px;
+  box-shadow: -1px 2px 4px rgba(0,0,0,0.4), 1px -2px 4px rgba(255,255,255,0.7);
+  border-radius: 3px;
+  transition: all 0.2s ease-in-out 0s;
+}
+
+a.nav-button:hover {
+  height: 28px;
+}
+
+a.nav-button object {
+  filter: invert(80%) sepia(16%) saturate(0%) hue-rotate(203deg) brightness(70%) contrast(88%);
+  padding: 3px;
+  pointer-events: none; /* Let's point events pass the object */
+}
+
 #logosvg {
   height: 50px;
 }
