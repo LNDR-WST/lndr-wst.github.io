@@ -309,6 +309,18 @@ video {
   padding: 0.25em 0.75em;
 }
 
+#card-year {
+  position: absolute;
+  left: 18px;
+  bottom: 138px;
+}
+
+#card-year > p {
+  color: #5D5E60;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
 #card-tag-wrapper {
   display: flex;
   justify-content: center;
