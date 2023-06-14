@@ -55,7 +55,7 @@ a.nav-button {
 }
 
 a.nav-button object {
-  filter: invert(30%) sepia(9%) saturate(7%) hue-rotate(51deg) brightness(94%) contrast(91%);
+  filter: contrast(40%);
   /* filter: invert(32%) sepia(0%) saturate(100%) hue-rotate(181deg) brightness(85%) contrast(99%); */
   padding: 3px;
   pointer-events: none; /* Let's point events pass the object */
