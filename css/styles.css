@@ -1035,6 +1035,18 @@ img.float-right, img.float-left {
     height: auto;
   }
 
+.tech-icons {
+  display:flex;
+  justify-content: center;
+}
+
+.tech-icons object {
+  height: 25px;
+  width: 25px;
+  filter: invert(80%) sepia(16%) saturate(0%) hue-rotate(203deg) brightness(70%) contrast(88%);
+  padding: 0 15px;
+}
+
 /************************
 * Scroll Down Button
 * https://codepen.io/matthewhirsch/pen/qOxmoz
