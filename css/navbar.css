@@ -44,6 +44,7 @@
 
 a.nav-button {
   display: flex;
+  justify-content: center;
   align-items: center;
   width: 24px;
   height: 24px;
@@ -56,9 +57,7 @@ a.nav-button {
 
 a.nav-button object {
   filter: contrast(40%);
-  width: 21px;
-  /* filter: invert(32%) sepia(0%) saturate(100%) hue-rotate(181deg) brightness(85%) contrast(99%); */
-  padding: 3px;
+  width: 20px;
   pointer-events: none; /* Let's point events pass the object */
 }
 
