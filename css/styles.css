@@ -89,7 +89,7 @@ body {
 }
 
 .dark-text {
-  color: #131313;
+  color: #1c343c;
 }
 
 .noscript {
@@ -139,6 +139,8 @@ h1 + p {
 
 h2 {
   font-size: 5em;
+  margin-top: 0.5em;
+  margin-bottom: 0.2em;
   text-shadow: -0.025em 0.025em 0.056em rgba(0,0,0,0.4), 0.025em -0.025em 0.056em rgba(255,255,255,0.7);
 }
 
@@ -253,6 +255,16 @@ video {
   cursor: pointer;
   transition: background-color 0.5s, color 0.5s;
   transition-timing-function: ease-in-out;
+}
+
+span.btn-details {
+  border: 2px solid gray;
+  border-radius: 7px;
+  padding: 1px 5px;
+  font-weight: bold;
+  margin-right: 0.2em;
+  margin-left: 0.2em;
+  color: gray;
 }
 
 #cardwrapper {
@@ -739,6 +751,10 @@ a:visited {
   color: white;
 }
 
+a.about, a.about:active, a.about:visited {
+  color: #224462;
+}
+
 a.attribution {
   align-self: end;
   font-size: 10px;
@@ -750,6 +766,17 @@ ul {
   font-size: 0.8em;
   /* width: 100%; */
   /* margin: 0 0 0 auto; */
+}
+
+div.double-column-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+div.double-column-list > ul {
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 img {
@@ -1053,6 +1080,17 @@ p.demo-info {
     width: 100%;
     height: auto;
   }
+
+div.icon-wrapper {
+  display: flex;
+  justify-content: center !important;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+div.icon-wrapper object {
+  margin-top: 0.5em !important;
+}
 
 .tech-icons {
   display:flex;
