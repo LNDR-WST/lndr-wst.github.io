@@ -69,6 +69,27 @@
                     </div>
                 </details>
                 <div id="cardwrapper">
+                    <div class="card web">
+                        <div class="card-header">
+                            <img class="lazyload" data-src="/img/projects/hunt-sens/hunt-sens_screen.webp" alt="Hunt Sensitivity Thumbnail">
+                        </div>
+                        <div class="card-content">
+                            <div id="card-tag-wrapper">
+                                <p>2023</p>
+                                <div>
+                                    <div class="noselect" id="card-tag">Web</div>
+                                </div>
+                            </div>
+                            <p id="card-headline">Hunt Showdown:<br>Sensitivity Calculator</p>
+                            <p id="card-info">Ein-Tages-Projekt eines Mouse-Sensitivity-Rechners</p>
+                        </div>
+                        <div id="card-tech">
+                            <object type="image/svg+xml" data="/img/icons/tech/javascript.svg" class="lazyload"></object>
+                            <object type="image/svg+xml" data="/img/icons/tech/html5.svg" class="lazyload"></object>
+                            <object type="image/svg+xml" data="/img/icons/tech/css3.svg" class="lazyload"></object>
+                        </div>                        
+                        <div id="card-btn" onclick="showContent('hunt-sens')"><a class="noselect">Details</a></div>
+                    </div>
                     <div class="card mobile application">
                         <div class="card-header">
                             <img class="lazyload" data-src="/img/projects/otto-widget/otto-widget_screen.webp" alt="OTTO Widget Thumbnail">
@@ -322,7 +343,7 @@
                     <a class="close" onclick="hideContent('fah')"></a>
                     <div class="blurred">
                         <div class="overlay-wrapper" onclick="event.stopPropagation()">
-                            <h3 class="overlay-hl" id="games">Finding a Home (2021)</h3>
+                            <h3 class="overlay-hl" id="graphics">Finding a Home (2021)</h3>
                             <table>
                                 <tr>
                                     <th>Projekt:</th>
@@ -396,7 +417,7 @@
                     <a class="close" onclick="hideContent('wotk')"></a>
                     <div class="blurred">
                         <div class="overlay-wrapper" onclick="event.stopPropagation()">
-                            <h3 class="overlay-hl" id="games">Wrath of Tiny Knight (2021)</h3>
+                            <h3 class="overlay-hl" id="graphics">Wrath of Tiny Knight (2021)</h3>
                             <table>
                                 <tr>
                                     <th>Projekt:</th>
@@ -831,7 +852,7 @@
                     <a class="close" onclick="hideContent('mischifischi')"></a>
                     <div class="blurred">
                         <div class="overlay-wrapper" onclick="event.stopPropagation()">
-                            <h3 class="overlay-hl" id="application">MischiFischi (2022)</h3>
+                            <h3 class="overlay-hl" id="graphics">MischiFischi (2022)</h3>
                             <table>
                                 <tr>
                                     <th>Projekt:</th>
@@ -920,7 +941,7 @@
                     <a class="close" onclick="hideContent('timetracker')"></a>
                     <div class="blurred">
                         <div class="overlay-wrapper" onclick="event.stopPropagation()">
-                            <h3 class="overlay-hl" id="application">Timetracker (2022)</h3>
+                            <h3 class="overlay-hl" id="graphics">Timetracker (2022)</h3>
                             <table>
                                 <tr>
                                     <th>Projekt:</th>
@@ -976,7 +997,7 @@
                     <a class="close" onclick="hideContent('dmc22')"></a>
                     <div class="blurred">
                         <div class="overlay-wrapper" onclick="event.stopPropagation()">
-                            <h3 class="overlay-hl" id="application">Data Mining Cup (2022)</h3>
+                            <h3 class="overlay-hl" id="graphics">Data Mining Cup (2022)</h3>
                             <table>
                                 <tr>
                                     <th>Projekt:</th>
@@ -2939,7 +2960,7 @@
                     <a class="close" onclick="hideContent('codex')"></a>
                     <div class="blurred">
                         <div class="overlay-wrapper" onclick="event.stopPropagation()">
-                            <h3 class="overlay-hl" id="web">Codex (2020)</h3>
+                            <h3 class="overlay-hl" id="graphics">Codex (2020)</h3>
                             <table>
                                 <tr>
                                     <th>Projekt:</th>
@@ -3040,7 +3061,7 @@
                     <a class="close" onclick="hideContent('avprg-afm')"></a>
                     <div class="blurred">
                         <div class="overlay-wrapper" onclick="event.stopPropagation()">
-                            <h3 class="overlay-hl" id="web">Automatic Foley Machine (2023)</h3>
+                            <h3 class="overlay-hl" id="graphics">Automatic Foley Machine (2023)</h3>
                             <table>
                                 <tr>
                                     <th>Projekt:</th>
@@ -3154,7 +3175,7 @@
                     <a class="close" onclick="hideContent('audio-mixing')"></a>
                     <div class="blurred">
                         <div class="overlay-wrapper" onclick="event.stopPropagation()">
-                            <h3 class="overlay-hl" id="games">Audio Mixing (2023)</h3>
+                            <h3 class="overlay-hl" id="graphics">Audio Mixing (2023)</h3>
                             <table>
                                 <tr>
                                     <th>Projekt:</th>
@@ -3250,6 +3271,42 @@
                         </div>
                     </div>
                 </div>
+                <div class="overlay-content hidden" id="hunt-sens" onclick="hideContent('hunt-sens')">
+                    <a class="close" onclick="hideContent('hunt-sens')"></a>
+                    <div class="blurred">
+                        <div class="overlay-wrapper" onclick="event.stopPropagation()">
+                            <h3 class="overlay-hl" id="graphics">Sensitivity Calculator (2023)</h3>
+                            <table>
+                                <tr>
+                                    <th>Projekt:</th>
+                                    <td>Mouse-Sensitivity Calculator für <i>Hunt Showdown</i></td>
+                                </tr>
+                                <tr>
+                                    <th>Technologien:</th>
+                                    <td>Javascript, HTML, CSS</td>
+                                </tr>
+                            </table>
+                            <img data-src="./img/projects/hunt-sens/hunt-sens_main.webp" class="lazyload" alt="Hunt Showdown: Sensitivity Calculator Screenshot">
+                            <div class="link-btn-box">
+                                <a href="https://github.com/LeanderWernst/hunt-sensitivity" target="_blank" class="btn-link btn-github"></a>
+                                <a href="https://leanderwernst.de/hunt-sensitivity/" target="_blank" class="btn-link btn-demo"></a>
+                            </div>
+                            <h4>Hintergrund & Umsetzung</h4>
+                            <p>
+                                Das Spiel Hunt Showdown bietet die Möglichkeit, je nach Modus und sich veränderndem <i>Field of View</i> (FOV) sieben verschiedene Werte für die 
+                                Mouse-Sensitivity einzustellen. Wünschenswert ist dabei, wenn sich alle Werte zueinander so verhalten, dass die Bewegung der Maus in allen Modi 
+                                möglichst gleich schnell ist. Praktisch lässt sich dies nicht exakt erreichen, aber immerhin durch Kompromisse annähern.<br>
+                                Der Benutzer <a style="color: red;" href="https://www.reddit.com/user/No_Professional2258/">u/No_Professional2258</a> hat hierfür ein Script in einem Google Spreadsheet 
+                                entwickelt und auf <a style="color: red;" href="https://www.reddit.com/r/HuntShowdown/comments/rce4m8/script_for_calculating_correct_sensitivities_for/">Reddit</a> 
+                                veröffentlicht, dass die entsprechenden Werte berechnet.<br>
+                                Dieses Script wurde adaptiert und leicht korrigiert, um es als Webanwendung zur Verfügung zu stellen. Es bietet nun außerdem die Möglichkeit, 
+                                den Modus auszuwählen, der als Basis aller Berechnungen dienen soll. Zusätzlich wurde die Formel so korrigiert, dass die Berechnungen auch für andere 
+                                Monitor-Seitenverhältnisse als 16:9 funktionieren. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- END -->
             </div>
             <br>
         </div>
