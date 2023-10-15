@@ -411,7 +411,7 @@ span.btn-details {
   right: 30px;
 }
 
-#card-btn > a, a:visited {
+#card-btn > a, #card-btn > a:visited {
   width: 100%;
   color: grey;
   font-size: 16px;
@@ -753,12 +753,12 @@ p {
 }
 
 a {
-    color: white;
+    color: #ff0b44;
     text-decoration: none;
 }
 
 a:visited {
-  color: white;
+  color:#ff0b44;
 }
 
 a.about, a.about:active, a.about:visited {
@@ -1303,7 +1303,7 @@ div.icon-wrapper object {
 /* All Hover-Effects here! */
 @media (hover: hover) and (pointer: fine) {
   a:hover {
-    color:whitesmoke;
+    color:grey;
   }
   
   #hidden-content a.button:hover {

@@ -111,7 +111,7 @@
                         <div id="card-tech">
                             <object type="image/svg+xml" data="/img/icons/tech/swift.svg" class="lazyload"></object>
                         </div>                        
-                        <!-- <div id="card-btn" onclick="showContent('otto-widget')"><a class="noselect">Details</a></div> -->
+                        <div id="card-btn" onclick="showContent('otto-widget')"><a class="noselect">Details</a></div>
                     </div>
                     <div class="card games">
                         <div class="card-header">
@@ -3323,6 +3323,81 @@
                                 Dieses Script wurde adaptiert und leicht korrigiert, um es als Webanwendung zur Verfügung zu stellen. Es bietet nun außerdem die Möglichkeit, 
                                 den Modus auszuwählen, der als Basis aller Berechnungen dienen soll. Zusätzlich wurde die Formel so korrigiert, dass die Berechnungen auch für andere 
                                 Monitor-Seitenverhältnisse als 16:9 funktionieren. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="overlay-content hidden" id="otto-widget" onclick="hideContent('otto-widget')">
+                    <a class="close" onclick="hideContent('otto-widget')"></a>
+                    <div class="blurred">
+                        <div class="overlay-wrapper" onclick="event.stopPropagation()">
+                            <h3 class="overlay-hl" id="graphics">iOS-Widget Bestellverfolgung (2023)</h3>
+                            <table>
+                                <tr>
+                                    <th>Projekt:</th>
+                                    <td>Prototyp eines iOS-Widgets zur Bestellverfolgung mit Anbindung an eine RESTful-API</td>
+                                </tr>
+                                <tr>
+                                    <th>Semester:</th>
+                                    <td>6 (Media Systems, HAW Hamburg)</td>
+                                </tr>
+                                <tr>
+                                    <th>Technologien:</th>
+                                    <td>Swift, SwiftUI, WidgetKit, REST</td>
+                                </tr>
+                                <tr>
+                                    <th>Hauptaufgaben:</th>
+                                    <td><u>Frontend:</u><br>Widget Views (Design & Umsetzung: S, M, L)</td>
+                                    <td><u>Backend:</u><br>Widget Behaviour, Notifications, Keychain Storage</td>
+                                </tr>
+                                <tr>
+                                    <th>Mitwirkende:</th>
+                                    <td>Noah H.</td>
+                                    <td>Thorben A.</td>
+                                </tr>
+                            </table>
+                            <img data-src="./img/projects/otto-widget/otto-widget_main.webp" class="lazyload" alt="OTTO Widget Mockup">
+                            <a class="attribution" href='https://mockupnest.com/iphone-14-pro-clay-mockup/'>Mockup designed by Mockupnest</a>
+                            <h4>Aufgabe</h4>
+                            <p>
+                                In Kooperation mit der OTTO GmbH & Co KG sollte im Rahmen der Projektarbeit ein iOS-Widget entwickelt werden, das Nutzer:innen anhand einer 
+                                <a href="https://api.otto.de/portal/reference/orders">von OTTO bereitgestellten RESTful API</a> schnell und übersichtlich Informationen 
+                                zum Status ihrer offenen Bestellungen bereitstellt. Bei Änderungen am Bestellstatus sollten die Kund:innen aktiv 
+                                darüber informiert werden und über eine Verlinkung zur zugehörigen Bestelldetailseite im Konto innerhalb der App gelangen können.<br>
+                                Die von OTTO bereitgestellte API lieferte unter anderem folgende Informationen:
+                                <ul>
+                                    <li>Das bestellte Produkt inkl. Name, Bild und ID</li>
+                                    <li>Den aktuellen Bestellstatus</li>
+                                    <li>Das Bestelldatum</li>
+                                    <li>Die Versandmethode</li>
+                                    <li>Die voraussichtliche Lieferzeit bei Bestelleingang</li>
+                                    <li>Einen Tracking-Link sofern verfügbar</li>
+                                </ul>
+                                Die API nutzt OAuth 2.0 zur Authentifizierung der Kund:innen, wodurch nur Informationen abgerufen werden konnten, die zum authentifizierten Konto gehörten.
+                                Die zur Widget-Erstellung zwingend notwendige „Host-App“ (Haupt-App, die das Widget als Erweiterung beinhaltet) konnte vernachlässigt und nur so weit entwickelt werden, 
+                                dass die für das Widget geforderten Funktionen realisiert werden konnten. Außerdem durfte das Widget vom offiziellen OTTO-Interface/Corporate Design abweichen.
+                                Neben der Umsetzung des Widgets sollte außerdem der Umgang mit der API und der zugehörigen Dokumentation, die bislang nur intern genutzt 
+                                wurde, festgehalten werden.<br>
+                                <br>
+
+                            </p>
+                            <h4>Umsetzung</h4>
+                            <p>
+                                Für die Arbeitsweise im Team wurde sich an dem Vorgehen nach Scrumban orientiert. Die Aufgaben wurden in einem Kanban-Board verwaltet und in Sprints aufgeteilt.<br>
+                                <br>
+                                Das Widget wurde in drei Größen (Small, Medium, Large) unabhängig von der offiziellen OTTO-App nativ für iOS realisiert. Zum Zeitpunkt der Entwicklung, gab es keine 
+                                Möglichkeit für interaktive Widgets in iOS. Auch die Host-App wurde nicht nur funktional umgesetzt, sondern auch gestalerisch an das Widget angepasst.<br>
+                                Das Projekt diente der OTTO GmbH & Co KG als interner Showcase und zum Test, ob ein externes Team mit der bestehenden API-Dokumentation reibungslos arbeiten kann.
+                                Für uns als Projektteam war es außerdem ein Lernprojekt, um sich mit der nativen Entwicklung von iOS-Apps und -Widgets vertraut zu machen, da bislang keine Erfahrung 
+                                mit der Programmiersprache Swift oder den zugehörigen Frameworks vorhanden war.<br>
+                                <br>
+                                Die Host-App dient der Authentifizierung, um anschließend die Bestellungen des zugehörigen Kontos abzurufen. Neben einer Listenansicht der bestellten 
+                                Produkte kann auch eine Detailseite mit weiteren Infors aufgerufen werden.<br>
+                                Das Widget kann je nach Anmeldestatus verschiedene Zustände abbilden und zum Anmelden auffordern. Klicks auf Produkte im Widget führen via Deeplink in die Host-App 
+                                zur Detailansicht. Bei verfügbarem Tracking-Link kann vom Widget direkt zu Safari zur Sendungsverfolgung gewechselt werden. Bei Änderungen eines Bestellstatus wird 
+                                eine Notification ausgelöst, die über die Änderung informiert. Für Widget und Host-App wurde außerdem auf Darkmode-Kompatibilität geachtet.
+                                <br><br>
+                                Screenshots der Anwendungen können aufgrund bislang fehlender Freigabe nicht gezeigt werden, beim gezeigten Mockup handelt es sich um eine grafische Nachempfindung.
                             </p>
                         </div>
                     </div>
