@@ -73,6 +73,11 @@ function hideContent(id) {
     document.getElementById(id).classList.add('hidden');
 }
 
+/* Warning for extended loading duration */
+function showWarning() {
+    alert("Loading the following content may take a while due to the free-tier option of the demo server.\n\nPlease be patient.");
+}
+
 /* Navigation Hide */
 
 let prevScrollpos = window.pageYOffset;

@@ -394,11 +394,21 @@ span.btn-details {
   cursor: pointer;
   text-transform: uppercase;
   background-color: #c0c0c0;
-  padding: 18px 32px;
-  margin: 0.5em 1em;
+  width: 70px;
+  padding: 18px 20px;
+  margin: 0.5em .2em;
+  text-align: center;
   border-radius: 10px;
   box-shadow: -1px 2px 5px rgba(0,0,0,0.4), 1px -2px 5px rgba(255,255,255,0.7);
   transition: all .2s ease-in-out;
+}
+
+.card-btn-wrapper #card-btn:nth-child(1) {
+  left: 30px;
+}
+
+.card-btn-wrapper #card-btn:nth-child(2) {
+  right: 30px;
 }
 
 #card-btn > a, a:visited {
