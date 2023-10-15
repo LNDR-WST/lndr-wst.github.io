@@ -69,6 +69,26 @@
                     </div>
                 </details>
                 <div id="cardwrapper">
+                    <div class="card machlearn">
+                        <div class="card-header">
+                            <img class="lazyload" data-src="/img/projects/fer/fer-screen.webp" alt="Facial Expression Recognition Thumbnail">
+                        </div>
+                        <div class="card-content">
+                            <div id="card-tag-wrapper">
+                                <p>2023</p>
+                                <div>
+                                    <div class="noselect" id="card-tag">Mach. Learn.</div>
+                                </div>
+                            </div>
+                            <p id="card-headline">Facial Expression Recognition under Partial Face Occlusion</p>
+                            <p id="card-info">Lernprojekt als Einstieg in Deep Neural Networks und FER-Tasks</p>
+                        </div>
+                        <div id="card-tech">
+                            <object type="image/svg+xml" data="/img/icons/tech/tensorflow.svg" class="lazyload"></object>
+                            <object type="image/svg+xml" data="/img/icons/tech/keras.svg" class="lazyload"></object>
+                        </div>
+                        <div id="card-btn" onclick="showContent('facial-expression-recognition')"><a class="noselect">Details</a></div>
+                    </div>
                     <div class="card web">
                         <div class="card-header">
                             <img class="lazyload" data-src="/img/projects/hunt-sens/hunt-sens_screen.webp" alt="Hunt Sensitivity Thumbnail">
@@ -125,7 +145,7 @@
                                 </div>
                             </div>
                             <p id="card-headline">Audio Mixing</p>
-                            <p id="card-info">Virtuelles Trainingssystem zum Mischen lernen an einem analogen Mischpult (<span style="font-style: italic;">Unity</span>)</p>
+                            <p id="card-info">Virtuelles Trainingssystem zum Mischen lernen an einem analogen Mischpult</p>
                         </div>
                         <div id="card-tech">
                             <object type="image/svg+xml" data="/img/icons/tech/unity.svg" class="lazyload"></object>
@@ -320,6 +340,8 @@
                         </div>
                         <div id="card-tech">
                             <object type="image/svg+xml" data="/img/icons/tech/ags.svg" class="lazyload"></object>
+                            <object type="image/svg+xml" data="/img/icons/tech/adobephotoshop.svg" class="lazyload"></object>
+                            <object type="image/svg+xml" data="/img/icons/tech/adobeillustrator.svg" class="lazyload"></object>
                         </div>
                         <div class="card-btn-wrapper">
                             <div id="card-btn" onclick="showContent('fah')"><a class="noselect">Details</a></div>
@@ -3398,6 +3420,56 @@
                                 eine Notification ausgelöst, die über die Änderung informiert. Für Widget und Host-App wurde außerdem auf Darkmode-Kompatibilität geachtet.
                                 <br><br>
                                 Screenshots der Anwendungen können aufgrund bislang fehlender Freigabe nicht gezeigt werden, beim gezeigten Mockup handelt es sich um eine grafische Nachempfindung.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="overlay-content hidden" id="facial-expression-recognition" onclick="hideContent('facial-expression-recognition')">
+                    <a class="close" onclick="hideContent('facial-expression-recognition')"></a>
+                    <div class="blurred">
+                        <div class="overlay-wrapper" onclick="event.stopPropagation()">
+                            <h3 class="overlay-hl" id="graphics">Facial Expression Recognition (2023)</h3>
+                            <table>
+                                <tr>
+                                    <th>Projekt:</th>
+                                    <td>Einfluss von Partial Face Occlusion auf die Erkennungsraten von Deep Neural Networks für Facial Expression Recognition</td>
+                                </tr>
+                                <tr>
+                                    <th>Semester:</th>
+                                    <td>7 (Media Systems, HAW Hamburg)</td>
+                                </tr>
+                                <tr>
+                                    <th>Technologien:</th>
+                                    <td>Tensorflow, Keras</td>
+                                </tr>
+                            </table>
+                            <img data-src="./img/projects/fer/fer-main.webp" class="lazyload" alt="Schematische Darstellung des fine-tuned ResNet50">
+                            <div class="link-btn-box">
+                                <a href="https://github.com/LeanderWernst/facial-expression-recognition" target="_blank" class="btn-link btn-github"></a>
+                                <a href="./pdf/fer_dokumentation.pdf" target="_blank" class="btn-link btn-pdf"></a>
+                            </div>
+                            <h4>Aufgabe</h4>
+                            <p>
+                                Das Projekt diente als Einstieg in die Grundlagen von Deep Neural Networks, da hierzu bislang kein Vorwissen vorhanden war. Es beschäftigt sich mit dem Einfluss 
+                                von <i>Partial Face Occlusion</i>, die bspw. durch das Tragen von VR-Brillen verursacht wird, auf die Erkennungsraten von Facial-Expression-Recognition-Modellen 
+                                (FER-Modellen) und soll als Grundlage dienen, um weiterführende Fragestellungen des Themengebiets später im Laufe einer möglichen Abschlussarbeit beantworten zu können.<br>
+                                Ziel des Projekts war es, ein Deep Neural Network für den FER-Task zu trainieren und mit einer Toleranz von ca. 10 % an die Erkennungsraten von State-of-the-Art-Modellen, 
+                                wie sie bspw. auf <a href="https://paperswithcode.com/task/facial-expression-recognition">paperswithcode.com</a> gelistet sind, heranzukommen. Anschließend sollte der Einfluss 
+                                von Partial Face Occlusion auf die Erkennungsraten untersucht werden, wofür zunächst eine Pipeline entwickelt werden sollte, um in einem geeigneten Datensatz die 
+                                Verdeckung der Augenpartie bzw. oberen Gesichtshälfte zu simulieren.<br>
+                                <br>
+                                Die Arbeit wurde im Rahmen des im Curriculum vorgesehenen Moduls <i>Projekt C</i>, das mit einem Workload von ca. 300 Std. bemessen ist, an der HAW Hamburg durchgeführt.
+                            </p>
+                            <img data-src="./img/projects/fer/fer-main2.webp" class="lazyload" alt="AffectNet Data Samples mit Klassen-Label">
+                            <h4>Umsetzung</h4>
+                            <p>
+                                Das Projekt wurde mit Tensorflow und mithilfe der Keras-API umgesetzt. Als Datensatz diente die <a href="http://mohammadmahoor.com/affectnet/" target="_blank">AffectNet-Database</a> 
+                                unter Verwendung des kategorischen Modells mit insgesamt acht Klassen. Nach dem Entwickeln und Durchlaufen der Daten durch die Pipeline, wurden wurden diese in Trainings-, 
+                                Validierungs- und Testdaten aufgeteilt und vor dem Training mittels Data Augmentation erweitert.<br>
+                                Das erfolgreichste Modell war ein mit dem VGGFace-Datensatz vortrainiertes und schließlich mit dem AffectNet-Datensatz <i>fine-tuned</i> ResNet50, das mit ca. 59 % Accuracy 
+                                recht nah an die Erkennungsraten von State-of-the-Art-Modellen (ca. 64 % Accuracy des Modells <i>POSTER++</i>) herankam.<br>
+                                <br>
+                                Die Dokumentation wurde mit LaTeX in Vorbereitung auf eine bevorstehende Abschlussarbeit erstellt.
                             </p>
                         </div>
                     </div>
