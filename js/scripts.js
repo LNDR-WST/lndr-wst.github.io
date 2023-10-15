@@ -153,7 +153,7 @@ function addFilter(tag){
     if (btnAll.classList.contains('active')) {
         btnAll.classList.remove('active');
     }
-    if (filterList.length >= 6) {
+    if (filterList.length >= 7) {
         resetFilter();
     }
 }
