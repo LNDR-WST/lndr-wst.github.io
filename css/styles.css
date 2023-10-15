@@ -444,7 +444,7 @@ details[open] > div > .filter-btn {
 }
 
 summary {
-  display: block;
+  display: flex;
   cursor: pointer;
   color: #c0c0c0;
   font-weight: bold;
@@ -458,12 +458,21 @@ summary {
   margin: 0.5em;
 }
 
-summary::before {
-  content: "+ ";
+.rotate-on-hover {
+  transition: transform 0.3s;
+  transform-origin: center;
+}
+
+summary:hover .rotate-on-hover {
+  transform: rotate(180deg);
+}
+
+details[open] .rotate-on-hover {
+  display: none;
 }
 
 details[open] > summary::before {
-  content :"− "
+  content :"−"
 }
 
 @keyframes slideDown {
