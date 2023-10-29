@@ -389,12 +389,10 @@ span.btn-details {
   justify-content: center;
   align-items: center;
   align-self: center;
-  position: absolute;
-  bottom: -40px;
   cursor: pointer;
   text-transform: uppercase;
   background-color: #c0c0c0;
-  width: 70px;
+  min-width: 70px;
   padding: 18px 20px;
   margin: 0.5em .2em;
   text-align: center;
@@ -403,12 +401,12 @@ span.btn-details {
   transition: all .2s ease-in-out;
 }
 
-.card-btn-wrapper #card-btn:nth-child(1) {
-  left: 30px;
-}
-
-.card-btn-wrapper #card-btn:nth-child(2) {
-  right: 30px;
+.card-btn-wrapper {
+  display: flex;
+  position: absolute;
+  bottom: -40px;
+  width: 100%;
+  justify-content: center;
 }
 
 #card-btn > a, #card-btn > a:visited {
@@ -1181,6 +1179,13 @@ div.icon-wrapper object {
 /************************
 * Media Queries
 */
+
+/* Hide Demo Buttons below 350px screen width */
+@media (max-width: 349.98px) {
+  .card-btn-wrapper #card-btn:nth-child(2) {
+    display: none;
+  }
+}
 
 /* X-Small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) { 
